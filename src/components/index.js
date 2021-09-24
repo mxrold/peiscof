@@ -11,6 +11,7 @@ import SectionForm from './SectionForm';
 import SectionGrid from './SectionGrid';
 import SectionHero from './SectionHero';
 import SectionPosts from './SectionPosts';
+import MainPosts from './MainPosts';
 
 export {
     Action,
@@ -26,6 +27,7 @@ export {
     SectionGrid,
     SectionHero,
     SectionPosts,
+    MainPosts
 };
 
 export default {
@@ -42,4 +44,5 @@ export default {
     SectionGrid,
     SectionHero,
     SectionPosts,
+    MainPosts
 };

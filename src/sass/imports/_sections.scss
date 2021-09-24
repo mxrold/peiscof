@@ -39,6 +39,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  justify-content: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,89 +107,6 @@
   margin-bottom: 1.33333em;
 }
 
-/* Hero section */
-.block-hero {
-  .block-header {
-    margin-bottom: 0.83333em;
-  }
-
-  .block-title {
-    font-size: 2.44444em;
-  }
-}
-
-/* Portfolio section */
-.view-all-button {
-  box-sizing: border-box;
-  color: _palette(accent);
-  display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.2;
-  padding: 0.9em 1em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  z-index: 2;
-
-  .accent-green & {
-    color: _palette(accent-green);
-  }
-
-  .accent-blue & {
-    color: _palette(accent-blue);
-  }
-
-  .accent-violet & {
-    color: _palette(accent-violet);
-  }
-
-  .accent-yellow & {
-    color: _palette(accent-yellow);
-  }
-
-  &:before,
-  &:after {
-    border: 2px solid _palette(accent);
-    box-sizing: border-box;
-    content: "";
-    height: 32%;
-    left: 0;
-    position: absolute;
-    transition: .3s ease;
-    -webkit-transition: .3s ease;
-    width: 100%;
-
-    .accent-green & {
-      border-color: _palette(accent-green);
-    }
-  
-    .accent-blue & {
-      border-color: _palette(accent-blue);
-    }
-  
-    .accent-violet & {
-      border-color: _palette(accent-violet);
-    }
-  
-    .accent-yellow & {
-      border-color: _palette(accent-yellow);
-    }
-  }
-
-  &:before {
-    border-bottom: 0;
-    top: 0;
-  }
-
-  &:after {
-    border-top: 0;
-    bottom: 0;
-  }
-}
-
 .view-all-link {
   .project-thumbnail {
     &:after {
@@ -206,45 +124,6 @@
       }
     }
   }
-}
-
-/* Testimonials section */
-.testimonial {
-  font-size: 1em;
-  line-height: 1.66667;
-  margin: 0;
-  padding-left: 1.66667em;
-
-  &:before {
-    font-size: 3rem;
-  }
-
-  .palette-dark & {
-    color: _palette(charcoal-light-60);
-  }
-}
-
-.testimonial-footer {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1.33333em;
-}
-
-.testimonial-avatar {
-  border-radius: 50%;
-  height: 60px;
-  margin-right: 0.83333em;
-  width: 60px;
-}
-
-.testimonial-author {
-  font-size: 0.88889em;
-  font-weight: bold;
-  margin: 0;
 }
 
 @media only screen and (max-width: 600px) {

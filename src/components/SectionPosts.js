@@ -12,6 +12,7 @@ export default class SectionPosts extends React.Component {
         const thumbImageAlt = _.get(post, 'thumb_image_alt', '');
         const excerpt = _.get(post, 'excerpt');
         const date = _.get(post, 'date');
+        const tag = _.get(post, 'tag')
         const dateTimeAttr = moment(date).strftime('%Y-%m-%d %H:%M');
         const formattedDate = moment(date).strftime('%B %d, %Y');
         const postUrl = getPageUrl(post, { withPrefix: true });
@@ -27,6 +28,11 @@ export default class SectionPosts extends React.Component {
                         </div>
                     </header>
                     {excerpt && <p className="post-content">{excerpt}</p>}
+                    {tag && 
+                        <div className="post-tag">
+                            <span>#{tag}</span>
+                        </div>
+                    }
                 </div>
             </article>
         );
@@ -41,7 +47,7 @@ export default class SectionPosts extends React.Component {
         const colNumber = _.get(section, 'col_number', 'three');
         const posts = _.orderBy(_.get(this.props, 'posts', []), 'date', 'desc');
         const postsNumber = _.get(section, 'posts_number', 3);
-        const recentPosts = posts.slice(0, postsNumber);
+        const recentPosts = posts.slice(4, postsNumber);
 
         return (
             <section id={sectionId} className="block block-posts outer">

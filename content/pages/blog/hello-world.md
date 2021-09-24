@@ -4,6 +4,7 @@ subtitle: 'This is a nice subtitle'
 excerpt: >-
   Welcome to my new blog
 date: '2021-09-21'
+tag: Programación
 thumb_image: images/5_thumb.jpg
 thumb_image_alt: A white gamepad on a green background
 image: images/5.jpg

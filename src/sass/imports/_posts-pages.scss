@@ -5,9 +5,21 @@
   margin-bottom: 1.66667em;
 }
 
+.post-main {
+  background-color: _palette(white);
+  box-shadow: 0px 0px 4px 0px #ced0d4;
+  border-radius: 9px;
+}
+
+.post-inside {
+  position: relative;
+}
+
 .page-header,
 .post-header {
   margin-bottom: 2.5em;
+  padding-left: 0.83333em;
+  padding-right: 0.83333em;
 }
 
 .page-title,
@@ -55,6 +67,8 @@
 
   img {
     width: 100%;
+    height: 520px !important;
+    object-fit: cover;
   }
 }
 
@@ -80,6 +94,7 @@
     position: absolute;
     top: 0;
     width: 100%;
+    border-radius: 9px 9px 0 0;
   }
 }
 
@@ -99,6 +114,18 @@
 
   .post-meta {
     margin-top: 0.5em;
+  }
+}
+
+.post-tag {
+  position: absolute;
+  top: 0;
+  padding: 5px 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 9px 0 7px 0;
+
+  & span {
+    color: white;
   }
 }
 
@@ -138,5 +165,11 @@
 
   .post-subtitle {
     font-size: 1.22222em;
+  }
+
+  .post-image {
+    img {
+      width: 100%;
+    }
   }
 }
