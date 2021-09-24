@@ -9,7 +9,6 @@ export default class Advanced extends React.Component {
         const data = _.get(this.props, 'data');
         const config = _.get(data, 'config');
         const posts = _.get(this.props, 'posts');
-        const projects = _.get(this.props, 'projects');
         const page = _.get(this.props, 'page');
         const hideTitle = _.get(page, 'hide_title');
         const title = _.get(page, 'title');
@@ -33,7 +32,7 @@ export default class Advanced extends React.Component {
                     if (!Component) {
                         throw new Error(`no component matching the page section's type: ${sectionType}`);
                     }
-                    return <Component key={index} section={section} data={data} posts={posts} projects={projects} />;
+                    return <Component key={index} section={section} data={data} posts={posts} />;
                 })}
             </Layout>
         );
