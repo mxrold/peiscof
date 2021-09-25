@@ -1,28 +1,28 @@
 {
-    "title": "Stackbit Exto Theme",
+    "title": "Peiscof",
     "path_prefix": "/",
     "color_scheme": "light",
     "accent_color": "pink",
     "header": {
-        "title": "Exto",
+        "title": "Peiscof",
         "has_nav": true,
         "logo_img": "https://i.ibb.co/PhcMXmQ/logo-peiscof.png",
         "logo_img_alt": "Logo Peiscof",
         "nav_links": [
             {
-                "label": "Blog",
+                "label": "Articulos",
                 "url": "/blog/",
                 "style": "link"
             },
             {
-                "label": "Contact",
+                "label": "Contacto",
                 "url": "/contact/",
                 "style": "link"
             }
         ]
     },
     "footer": {
-        "content": "&copy; Stackbit. All rights reserved. This Jamstack site was created with <a href=\"https://www.stackbit.com/?utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">Stackbit</a>. Create yours <a href=\"https://app.stackbit.com/create?theme=exto&utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">now</a>",
+        "content": "2021 Peiscof. De Argentina con 💚 para el mundo.",
         "has_social": true,
         "social_links": [
             {
