@@ -4,7 +4,6 @@ import _ from 'lodash';
 
 import { Link, withPrefix, classNames, getPageUrl } from '../utils';
 import Action from './Action';
-
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -85,7 +84,15 @@ export default class Header extends React.Component {
                 <div className="inner">
                     <div className="site-header-inside">
                         <div className="site-branding">
-                            {logo ? <p className="site-logo"><Link href={withPrefix('/')}><img src={withPrefix(logo)} alt={logoAlt} /></Link></p>
+                            {
+                                logo 
+                                ? 
+                                <p className="site-logo">
+                                    <Link href={withPrefix('/')}>
+                                        <img src={withPrefix(logo)} alt={logoAlt} />
+                                        Peiscof
+                                    </Link>
+                                </p>
                                 : <p className="site-title"><Link href={withPrefix('/')}>{title}</Link></p>}
                         </div>
                         {hasNav && !_.isEmpty(navLinks) && this.renderNavLinks(navLinks, pageUrl)}

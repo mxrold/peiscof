@@ -6,6 +6,8 @@
     "header": {
         "title": "Exto",
         "has_nav": true,
+        "logo_img": "https://i.ibb.co/PhcMXmQ/logo-peiscof.png",
+        "logo_img_alt": "Logo Peiscof",
         "nav_links": [
             {
                 "label": "Blog",
