@@ -2,11 +2,11 @@
     "title": "Peiscof",
     "path_prefix": "/",
     "color_scheme": "light",
-    "accent_color": "pink",
+    "accent_color": "blue",
     "header": {
         "title": "Peiscof",
         "has_nav": true,
-        "logo_img": "https://i.ibb.co/PhcMXmQ/logo-peiscof.png",
+        "logo_img": "https://i.ibb.co/C7jz7dd/peiscof-logo.png",
         "logo_img_alt": "Logo Peiscof",
         "nav_links": [
             {
@@ -22,7 +22,7 @@
         ]
     },
     "footer": {
-        "content": "2021 Peiscof. De Argentina con 💚 para el mundo.",
+        "content": "2021 Peiscof. De Argentina con 💚.",
         "has_social": true,
         "social_links": [
             {

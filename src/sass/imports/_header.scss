@@ -39,10 +39,6 @@
     margin-right: 10px;
     margin-bottom: 5px;
   }
-
-  a {
-    font-size: 26px;
-  }
 }
 
 .site-title {
@@ -83,8 +79,9 @@
 }
 
 .menu-item {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2;
+  font-weight: 500;
 
   &.current-menu-item {
     color: _palette(accent);

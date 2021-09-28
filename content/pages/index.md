@@ -13,7 +13,7 @@ sections:
     posts_number: 9
     col_number: three
     actions:
-      - label: Todos los artículos
+      - label: Todos los artículos ❯
         url: blog
         style: button
 seo:

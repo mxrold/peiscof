@@ -5,11 +5,11 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: 0;
   border: 0;
-  border-radius: 0;
+  border-radius: 9px;
   box-sizing: border-box;
-  color: _palette(accent);
+  background-color: _palette(accent-blue);
+  color: _palette(light-gray) !important;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -26,25 +26,8 @@
   -webkit-transition: .3s ease;
   transition: .3s ease;
 
-  .accent-green & {
-    color: _palette(accent-green);
-  }
-
-  .accent-blue & {
-    color: _palette(accent-blue);
-  }
-
-  .accent-violet & {
-    color: _palette(accent-violet);
-  }
-
-  .accent-yellow & {
-    color: _palette(accent-yellow);
-  }
-
   &:before,
   &:after {
-    border: 2px solid currentColor;
     box-sizing: border-box;
     color: inherit;
     content: "";
@@ -69,24 +52,8 @@
   &:hover,
   &:focus,
   &:active {
-    color: _palette(accent);
+    color: _palette(white) !important;
     outline: 0;
-
-    .accent-green & {
-      color: _palette(accent-green);
-    }
-  
-    .accent-blue & {
-      color: _palette(accent-blue);
-    }
-  
-    .accent-violet & {
-      color: _palette(accent-violet);
-    }
-  
-    .accent-yellow & {
-      color: _palette(accent-yellow);
-    }
 
     &:before,
     &:after {

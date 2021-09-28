@@ -31,7 +31,7 @@ export default class Body extends React.Component {
         const config = _.get(this.props, 'config');
         const configTitle = _.get(config, 'title');
         const colorScheme = _.get(config, 'color_scheme', 'light');
-        const accentColor = _.get(config, 'accent_color', 'pink');
+        const accentColor = _.get(config, 'accent_color', 'blue');
         const favicon = _.get(config, 'favicon');
         const domain = _.trim(_.get(config, 'domain', ''), '/');
         const seo = _.get(page, 'seo');
@@ -60,6 +60,8 @@ export default class Body extends React.Component {
             return <meta key={index} {...nameAttr} content={value} />;
         });
 
+        console.log(accentColor)
+
         return (
             <React.Fragment>
                 <Helmet>
@@ -70,7 +72,7 @@ export default class Body extends React.Component {
                     <meta name="description" content={seoDescription} />
                     {!_.isEmpty(seoRobots) && <meta name="robots" content={seoRobots} />}
                     {seoExtra}
-                    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet" />
+                    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,500,700,700i&display=swap" rel="stylesheet" />
                     {favicon && <link rel="icon" href={withPrefix(favicon)} />}
                     <body className={classNames(`palette-${colorScheme}`, `accent-${accentColor}`)} />
                 </Helmet>
