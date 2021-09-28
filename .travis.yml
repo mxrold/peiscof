@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+- '12'
+cache:
+  directories:
+  - node_modules
+  - "~/.npm"
+git:
+  depth: 3
+branches:
+  only:
+  - master
+  - main
+before_deploy: yarn build
+deploy:
+  provider: netlify
+  site: d69b8ba1-a85f-495f-aef9-8ecac454736a
+  edge: true
+  prod: true
+  auth:
+    secure: jSi+9VkQq3LfPdaKo7f+YCCAaa9w2ojjk41cYKZNj1w1oxfSiA9EQs7kF8UWwktU9Iaiv0LhzDeyGGgeqXpbcIRQH4hqCfuiajzrLLIF2ei2IktFduCk67vOG6kXQZSUZh4zTRxVntH1q45neceAeGxi49ZJH9KFmrazLnWbLYOoDsaAQvOpPeTQVHi9lelpEfy97zFdm5s/irnxuVAFLwC32mR4PmJN3voeamnbIMVjJEKL6o8MDOuaGIHSgtx7TYUKijoCw+Cz+zmyxIaN0XIoMMnrFLZNyKyDS8889ZOfS9wTeWF58ByYIBMgeAkc0e71z1gHj1JDrS2wU3Icd0v4y5OWpxw3mM2Y/pHXTSnUfV5yTT0YvHB5mNs1aMOE4MzAL+YAVNk+ZXhGWkXGTXHxUPd3mAdBLP1JGLAOIUX1JsUIVg7WdRNN9EMAztrzPBiV6pWDBwrsYQ1di+vDcDLgw/xABSXghEBeyGG0ndfb4MI3RI2YWLwuX43K3E/YF3ivah95nEoGBrE+tXZTJogQUmoGq1qgBfJAPILNG8zgIUYTvxwKmbRuxPzXnmDqMRTA7dytnd/q5s275SVyHAy2i/dQB0QjrHAwBfTccFBSNRiWQjVfB8rgMVkZLfDwnC8Zz8JWkegBV+GdJIMS93bVimqKFqOSvWxjfpEB1hQ=
+  message: "$TRAVIS_COMMIT_MESSAGE"
+notifications:
+  email:
+    recipients:
+    - $EMAIL_STR
+    on_success: always
+    on_failure: always
