@@ -23,6 +23,6 @@ deploy:
 notifications:
   email:
     recipients:
-    - $EMAIL_STR
+      secure: WG0XfKxODNoD1262kuVg4THdVynoo5dWCS4MWfjJ1H6cv5mu74iAC7LR3wP1gxRFqSJBhspYwb7u5CSzmGGj7TFR5txPqmrguRlkkNDVryhCOJ9Gp1w9DJrdw+RVOV5HTXgQexook4f50zJNF60v3+TYfLAp1okiBWiXJsokAiJtP3cYbk+gv0cVSWkhHka80RrF/j2C0KHruJMo5KJPMJOS7oas/kAugMSl2+3SJteB/nr3wqaTHlM3tw3kDtglWj1FfV9g4ClXIWjHRL5WUKL+iiyr+2ctyTojtj8ufR33ymUqZRO7/yj4kRAI38OkTUJ4WFT3KDVUJtlZ449OihMhw+bLAHguHaaXQxVHtILH/6MROLpUpEOX8W7+hlrvPpLqyjAc9antuZDZWy09rcT8BaahBvnmABRoZ0UOdEJVxhLdXqVW2BR+Jz8/RuaMr0+IorMEJk2CipX3FgEK4VdFd0zpCGPgXfH9JAFpcMvH9nssXJBNS1d7qb8dGE+IFRIrwLN+aehDS9z70o1IV3L+Es201mVJqiL71IFn4F5F067i2DtvP8Rtp+boXeL0VXfnaQVJUPllZa3h2rRgmDOO1W+njR+QmfMG+Xn/mHvHbeJUwoDXHiC6jUpT3mhhrGyAnjXRVyQ4trNeAdaI/LdaCoFAtyYTrBgot9UKiZk=
     on_success: always
     on_failure: always
