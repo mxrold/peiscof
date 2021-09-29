@@ -21,6 +21,18 @@
   align-items: center;
 }
 
+.post-data-left {
+  display: flex;
+  align-items: center;
+
+  & span {
+    margin: 0 7px;
+    font-size: 14px;
+    font-weight: 500;
+    color: _palette(charcoal-light-40);
+  }
+}
+
 .post-title {
   margin-bottom: 0;
 }
@@ -110,7 +122,7 @@
   }
 
   .post-meta {
-    margin-top: 0.5em;
+    margin-top: 0.25em;
   }
 }
 

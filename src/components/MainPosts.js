@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import moment from 'moment-strftime';
 
-import { getPageUrl, htmlToReact, classNames, Link, withPrefix } from '../utils';
+import { getPageUrl, htmlToReact, classNames, Link, withPrefix, readingTime } from '../utils';
 
 export default class MainPosts extends React.Component {
   renderPost(post, index) {
@@ -13,8 +13,9 @@ export default class MainPosts extends React.Component {
     const date = _.get(post, 'date');
     const tag = _.get(post, 'tag').toUpperCase()
     const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
-    const formattedDate = moment(date).locale('es').format('ll');
+    const formattedDate = moment(date).locale('es').format('L');
     const postUrl = getPageUrl(post, { withPrefix: true });
+    const markdownContent = _.get(post, 'markdown_content');
 
     return (
         <article key={index} className="post grid-item-main post-main">
@@ -26,8 +27,14 @@ export default class MainPosts extends React.Component {
                 }
                 <header className="post-header">
                     <div className="post-data">
-                        <div className="post-meta">
-                            <time className="published" dateTime={dateTimeAttr}>{formattedDate}</time>
+                        <div className="post-data-left">
+                            <div className="post-meta">
+                                <time className="published" dateTime={dateTimeAttr}>{formattedDate}</time>
+                            </div>
+                            <span>·</span>
+                            <div>
+                                <span>{readingTime(markdownContent)}</span>
+                            </div>
                         </div>
                         {tag && 
                             <div className="post-tag">
@@ -36,7 +43,6 @@ export default class MainPosts extends React.Component {
                         }
                     </div>
                     <h3 className="post-title"><Link href={postUrl}>{title}</Link></h3>
-                    
                 </header>
                 {excerpt && <p className="post-content">{excerpt}</p>}
             </div>

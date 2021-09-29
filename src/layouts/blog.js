@@ -13,7 +13,7 @@ export default class Blog extends React.Component {
         const excerpt = _.get(post, 'excerpt');
         const date = _.get(post, 'date');
         const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
-        const formattedDate = moment(date).locale('es').format('ll');
+        const formattedDate = moment(date).locale('es').format('L');
         const postUrl = getPageUrl(post, { withPrefix: true });
 
         return (
