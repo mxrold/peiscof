@@ -5,7 +5,8 @@
   padding-top: 5em;
 }
 
-.block:first-child {
+.block:first-child,
+.page-header + .block {
   padding-top: 0;
 }
 
