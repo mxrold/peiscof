@@ -15,8 +15,8 @@ export default class Post extends React.Component {
         const image = _.get(page, 'image');
         const imageAlt = _.get(page, 'image_alt', '');
         const date = _.get(page, 'date');
-        const dateTimeAttr = moment(date).strftime('%Y-%m-%d %H:%M');
-        const formattedDate = moment(date).strftime('%A, %B %e, %Y');
+        const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
+        const formattedDate = moment(date).locale('es').strftime('%A, %e de %B de %Y');
         const markdownContent = _.get(page, 'markdown_content');
 
         return (

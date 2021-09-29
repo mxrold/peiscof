@@ -60,8 +60,6 @@ export default class Body extends React.Component {
             return <meta key={index} {...nameAttr} content={value} />;
         });
 
-        console.log(accentColor)
-
         return (
             <React.Fragment>
                 <Helmet>

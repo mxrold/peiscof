@@ -12,8 +12,8 @@ export default class Blog extends React.Component {
         const thumbImageAlt = _.get(post, 'thumb_image_alt', '');
         const excerpt = _.get(post, 'excerpt');
         const date = _.get(post, 'date');
-        const dateTimeAttr = moment(date).strftime('%Y-%m-%d %H:%M');
-        const formattedDate = moment(date).strftime('%B %d, %Y');
+        const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
+        const formattedDate = moment(date).locale('es').format('ll');
         const postUrl = getPageUrl(post, { withPrefix: true });
 
         return (
