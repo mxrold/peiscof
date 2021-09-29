@@ -9,6 +9,9 @@ thumb_image: images/5_thumb.jpg
 thumb_image_alt: A white gamepad on a green background
 image: images/5.jpg
 image_alt: A white gamepad on a green background
+author: Martín Roldán
+author_img: images/5.jpg
+author_description: Descripción del autor del artículo
 seo:
   title: Green is my favorite color
   description: >-

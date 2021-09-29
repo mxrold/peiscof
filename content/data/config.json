@@ -35,6 +35,7 @@
                 "url": "https://twitter.com/",
                 "style": "icon",
                 "icon": "twitter",
+                "color": "#000000",
                 "new_window": true
             },
             {
@@ -42,6 +43,31 @@
                 "url": "https://www.instagram.com/",
                 "style": "icon",
                 "icon": "instagram",
+                "color": "#000000",
+                "new_window": true
+            },
+            {
+                "label": "Facebook",
+                "url": "https://www.facebook.com/",
+                "style": "icon",
+                "icon": "facebook",
+                "color": "#000000",
+                "new_window": true
+            },
+            {
+                "label": "Linkedin",
+                "url": "https://www.linkedin.com/",
+                "style": "icon",
+                "icon": "linkedin",
+                "color": "#000000",
+                "new_window": true
+            },
+            {
+                "label": "Telegram",
+                "url": "https://www.linkedin.com/",
+                "style": "icon",
+                "icon": "telegram",
+                "color": "#000000",
                 "new_window": true
             }
         ]

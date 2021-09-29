@@ -10,7 +10,7 @@ export default class Action extends React.Component {
         const url = _.get(action, 'url');
         const label = _.get(action, 'label');
         const style = _.get(action, 'style', 'link');
-        const icon = _.get(action, 'icon', 'dribbble');
+        const icon = _.get(action, 'icon', '');
         const classes = classNames({
             'button': style === 'button',
             'button-icon': style === 'icon'

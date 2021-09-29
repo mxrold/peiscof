@@ -14,7 +14,6 @@
 .site-footer {
   a:not(.button) {
     color: inherit;
-
     &:hover,
     &:focus {
       color: _palette(accent);
@@ -36,6 +35,13 @@
       }
     }
   }
+}
+
+.site-footer-inside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-info,
@@ -83,10 +89,11 @@
   .site-footer-inside {
     -webkit-box-align: start;
     -ms-flex-align: start;
-    align-items: flex-start;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
   .social-links {
