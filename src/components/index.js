@@ -12,6 +12,7 @@ import SectionGrid from './SectionGrid';
 import SectionHero from './SectionHero';
 import SectionPosts from './SectionPosts';
 import MainPosts from './MainPosts';
+import Author from './Author';
 
 export {
     Action,
@@ -27,7 +28,8 @@ export {
     SectionGrid,
     SectionHero,
     SectionPosts,
-    MainPosts
+    MainPosts,
+    Author
 };
 
 export default {
@@ -44,5 +46,6 @@ export default {
     SectionGrid,
     SectionHero,
     SectionPosts,
-    MainPosts
+    MainPosts,
+    Author
 };

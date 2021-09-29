@@ -139,13 +139,15 @@ pre {
 }
 
 pre {
-  background: _palette(charcoal-light-80);
+  background: _palette(charcoal-light-3);
+  color: _palette(light-gray);
   font-size: 0.88889em;
   margin: 0 0 1.875em;
   overflow: auto;
   padding: 1.5em;
   position: relative;
   white-space: pre;
+  border-radius: 9px;
 
   .palette-dark & {
     background: _palette(charcoal-light-3);
@@ -296,7 +298,8 @@ embed,
 iframe,
 object,
 video {
-  max-width: 100%;
+  max-width: 640px;
+  max-height: 520px;
 }
 
 .post-content,

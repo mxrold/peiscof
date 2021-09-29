@@ -1,0 +1,49 @@
+.author {
+  width: max-content;
+  margin: 5rem auto 0 auto;
+  text-align: center;
+}
+
+.author-image {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.author-text {
+  margin-top: 1rem;
+}
+
+.author-name {
+  & span {
+    font-weight: 700;
+    color: _palette(accent-blue);
+  }
+}
+
+.author-description {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .author {
+    text-align: start;
+  }
+
+  .author-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .author-text {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
