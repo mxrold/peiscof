@@ -6,7 +6,7 @@
     "header": {
         "title": "Peiscof",
         "has_nav": true,
-        "logo_img": "https://i.ibb.co/C7jz7dd/peiscof-logo.png",
+        "logo_img": "images/peiscof-logo-large.png",
         "logo_img_alt": "Logo Peiscof",
         "nav_links": [
             {
@@ -29,13 +29,14 @@
     "footer": {
         "content": "2021 Peiscof. De Argentina con 💚.",
         "has_social": true,
+        "logo_img": "images/peiscof-logo-small.png",
+        "logo_img_alt": "Logo Peiscof",
         "social_links": [
             {
                 "label": "Twitter",
                 "url": "https://twitter.com/",
                 "style": "icon",
                 "icon": "twitter",
-                "color": "#000000",
                 "new_window": true
             },
             {
@@ -43,7 +44,6 @@
                 "url": "https://www.instagram.com/",
                 "style": "icon",
                 "icon": "instagram",
-                "color": "#000000",
                 "new_window": true
             },
             {
@@ -51,7 +51,6 @@
                 "url": "https://www.facebook.com/",
                 "style": "icon",
                 "icon": "facebook",
-                "color": "#000000",
                 "new_window": true
             },
             {
@@ -59,7 +58,6 @@
                 "url": "https://www.linkedin.com/",
                 "style": "icon",
                 "icon": "linkedin",
-                "color": "#000000",
                 "new_window": true
             },
             {
@@ -67,7 +65,6 @@
                 "url": "https://www.linkedin.com/",
                 "style": "icon",
                 "icon": "telegram",
-                "color": "#000000",
                 "new_window": true
             }
         ]

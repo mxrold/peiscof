@@ -65,6 +65,7 @@
 }
 
 .site-info {
+  flex-direction: column;
   .copyright,
   > a {
     margin: 0 10px 0.25em 0;
@@ -85,6 +86,19 @@
   }
 }
 
+.site-logo-footer {
+  margin-top: 10px;
+
+  & img {
+    width: 65px;
+    height: 65px;
+  }
+
+  & a {
+    border-bottom: none;
+  }
+}
+
 @media only screen and (min-width: 601px) {
   .site-footer-inside {
     -webkit-box-align: start;
@@ -94,6 +108,10 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+  }
+
+  .site-info {
+    align-items: flex-start;
   }
 
   .social-links {

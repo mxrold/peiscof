@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { htmlToReact } from '../utils';
+import { htmlToReact, withPrefix, Link } from '../utils';
 import ActionLink from './ActionLink';
 import Action from './Action';
 
@@ -13,14 +13,23 @@ export default class Footer extends React.Component {
         const links = _.get(footer, 'links');
         const hasSocial = _.get(footer, 'has_social');
         const socialLinks = _.get(footer, 'social_links');
+        const logo = _.get(footer, 'logo_img');
+        const logoAlt = _.get(footer, 'logo_img_alt', '');
 
         return (
             <footer id="colophon" className="site-footer outer">
                 <div className="inner">
                     <div className="site-footer-inside">
                         <div className="site-info">
-                            {copyright && <span className="copyright">{htmlToReact(copyright)}</span>}
-                            {_.map(links, (action, index) => <ActionLink key={index} action={action} />)}
+                            <div>
+                                {copyright && <span className="copyright">{htmlToReact(copyright)}</span>}
+                                {_.map(links, (action, index) => <ActionLink key={index} action={action} />)}
+                            </div>
+                            <div className="site-logo-footer">
+                                <Link href={withPrefix('/')}>
+                                    <img src={withPrefix(logo)} alt={logoAlt} />
+                                </Link>
+                            </div>
                         </div>
                         {hasSocial && !_.isEmpty(socialLinks) && (
                             <div className="social-links">
