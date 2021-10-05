@@ -23,7 +23,7 @@ export default class SectionForm extends React.Component {
         function handleSendEmail(e) {
             e.preventDefault();
         
-            emailjs.sendForm(process.env.EMAIL_SERVICE_ID, process.env.EMAIL_TEMPLATE_ID, e.target, process.env.EMAIL_USER_ID)
+            emailjs.sendForm('service_6evaz2l', 'template_ku7zq0i', e.target, 'user_MIYCiUP5LQl52r9NDoiFD', process.env.EMAIL_TOKEN)
               .then((result) => {
                 console.log(result.text);
                 Router.push('/thank-you')
