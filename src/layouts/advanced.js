@@ -18,7 +18,7 @@ export default class Advanced extends React.Component {
         return (
             <Layout page={page} config={config}>
                 {!hideTitle && (
-                    <header className="page-header inner-sm outer">
+                    <header className="page-header inner outer">
                         <h1 className="page-title line-top">{title}</h1>
                     </header>
                 )}

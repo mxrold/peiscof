@@ -83,6 +83,7 @@ option {
 
   input,
   textarea {
+    max-height: 300px;
     &:focus + .animate-border {
       width: 100%;
     }

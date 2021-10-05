@@ -1,8 +1,10 @@
 ---
-title: Thank You!
+title: ¡Correo enviado!
 layout: page
+actions:
+  - label: Todos los artículos ❯
+    url: blog
+    style: button
 ---
 
-Thank you for contacting us! We will get back in touch with you soon.
-
-**Have a great day!**
+Gracias por contactarnos. Nos pondremos en contacto pronto contigo.

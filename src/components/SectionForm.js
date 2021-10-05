@@ -1,5 +1,7 @@
 import React from 'react';
+import Router from 'next/router';
 import _ from 'lodash';
+import emailjs from 'emailjs-com';
 
 import { htmlToReact, markdownify } from '../utils';
 import FormField from './FormField';
@@ -12,12 +14,24 @@ export default class SectionForm extends React.Component {
         const subtitle = _.get(section, 'subtitle');
         const content = _.get(section, 'content');
         const formId = _.get(section, 'form_id');
-        const formAction = _.get(section, 'form_action');
         const formFields = _.get(section, 'form_fields');
         const submitLabel = _.get(section, 'submit_label');
         const formHoneypotInputId = formId + '-honeypot';
         const formHoneypotLabelId = formId + '-honeypot-label';
         const formHoneypotName = formId + '-bot-field';
+
+        function handleSendEmail(e) {
+            e.preventDefault();
+        
+            emailjs.sendForm(process.env.EMAIL_SERVICE_ID, process.env.EMAIL_TEMPLATE_ID, e.target, process.env.EMAIL_USER_ID)
+              .then((result) => {
+                console.log(result.text);
+                Router.push('/thank-you')
+              }, (error) => {
+                console.log(error.text);
+                window.alert('Ocurrió un error al enviar el formulario.')
+              });
+          }
 
         return (
             <section id={sectionId} className="block block-form outer">
@@ -33,7 +47,7 @@ export default class SectionForm extends React.Component {
                         <form
                             name={formId}
                             id={formId}
-                            {...(formAction ? ({ action: formAction }) : null)}
+                            onSubmit={handleSendEmail}
                             method="POST"
                             data-netlify="true"
                             data-netlify-honeypot={formHoneypotName}
