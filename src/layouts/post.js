@@ -21,6 +21,8 @@ export default class Post extends React.Component {
         const author = _.get(page, 'author');
         const author_img = _.get(page, 'author_img');
         const author_description = _.get(page, 'author_description');
+        const linkedin = _.get(page, 'author_linkedin');
+        const email = _.get(page, 'author_email');
         const markdownContent = _.get(page, 'markdown_content');
 
         return (
@@ -58,6 +60,8 @@ export default class Post extends React.Component {
                             image={author_img}
                             author={author}
                             description={author_description}
+                            linkedin={linkedin}
+                            email={email}
                         />
                     </article>
                 </div>

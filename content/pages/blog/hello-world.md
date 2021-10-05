@@ -12,6 +12,8 @@ image_alt: A white gamepad on a green background
 author: Martín Roldán
 author_img: images/5.jpg
 author_description: Descripción del autor del artículo
+author_linkedin: 'martindavidroldan'
+author_email: 'martin.davrold@gmail.com'
 seo:
   title: Green is my favorite color
   description: >-
