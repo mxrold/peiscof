@@ -89,7 +89,7 @@ export default class Header extends React.Component {
                                 ? 
                                 <p className="site-logo">
                                     <Link href={withPrefix('/')}>
-                                        <img src={withPrefix(logo)} alt={logoAlt} />
+                                        <img src={withPrefix(logo)} alt={logoAlt} loading="lazy" />
                                     </Link>
                                 </p>
                                 : <p className="site-title"><Link href={withPrefix('/')}>{title}</Link></p>}

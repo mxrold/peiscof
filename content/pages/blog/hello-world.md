@@ -2,50 +2,50 @@
 title: Hello world
 subtitle: 'This is a nice subtitle'
 excerpt: >-
-  Welcome to my new blog
+    Welcome to my new blog
 date: '2021-09-21'
 tag: Programación
-thumb_image: images/5_thumb.jpg
+thumb_image: https://i.ibb.co/kQkLgcC/articulo-de-prueba-image-thumb.jpg
 thumb_image_alt: A white gamepad on a green background
-image: images/5.jpg
+image: https://i.ibb.co/ZGRdQ60/articulo-de-prueba-image-1.jpg
 image_alt: A white gamepad on a green background
 author: Martín Roldán
-author_img: images/5.jpg
+author_img: https://i.ibb.co/ZGRdQ60/articulo-de-prueba-image-1.jpg
 author_description: Descripción del autor del artículo
 author_linkedin: 'martindavidroldan'
 author_email: 'martin.davrold@gmail.com'
 seo:
-  title: Green is my favorite color
-  description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt
-  extra:
-    - name: 'og:type'
-      value: article
-      keyName: property
-    - name: 'og:title'
-      value: Green is my favorite color
-      keyName: property
-    - name: 'og:description'
-      value: >-
+    title: Green is my favorite color
+    description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt
-      keyName: property
-    - name: 'og:image'
-      value: images/5.jpg
-      keyName: property
-      relativeUrl: true
-    - name: 'twitter:card'
-      value: summary_large_image
-    - name: 'twitter:title'
-      value: Green is my favorite color
-    - name: 'twitter:description'
-      value: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt
-    - name: 'twitter:image'
-      value: images/5.jpg
-      relativeUrl: true
+    extra:
+        - name: 'og:type'
+          value: article
+          keyName: property
+        - name: 'og:title'
+          value: Green is my favorite color
+          keyName: property
+        - name: 'og:description'
+          value: >-
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt
+          keyName: property
+        - name: 'og:image'
+          value: https://i.ibb.co/ZGRdQ60/articulo-de-prueba-image-1.jpg
+          keyName: property
+          relativeUrl: true
+        - name: 'twitter:card'
+          value: summary_large_image
+        - name: 'twitter:title'
+          value: Green is my favorite color
+        - name: 'twitter:description'
+          value: >-
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt
+        - name: 'twitter:image'
+          value: https://i.ibb.co/ZGRdQ60/articulo-de-prueba-image-1.jpg
+          relativeUrl: true
 layout: post
 ---
 
@@ -54,7 +54,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 Why do we use it?
 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
 
 Where does it come from?
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.

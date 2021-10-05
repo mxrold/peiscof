@@ -22,7 +22,7 @@ export default class MainPosts extends React.Component {
             <div className="post-inside">
                 {thumbImage && 
                     <Link className="post-thumbnail" href={postUrl}>
-                        <img src={withPrefix(thumbImage)} alt={thumbImageAlt} />
+                        <img src={withPrefix(thumbImage)} alt={thumbImageAlt} loading="lazy" />
                     </Link>
                 }
                 <header className="post-header">

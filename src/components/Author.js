@@ -9,7 +9,7 @@ export default function Author ({ image, author, description, linkedin, email })
     <footer className="author">
       <div className="author-data">
           <figure className="author-image">
-              <img src={withPrefix(image)} alt={`Imagen de ${author}`} />
+              <img src={withPrefix(image)} alt={`Imagen de ${author}`} loading="lazy" />
           </figure>
           <div className="author-text">
               <h3 className="author-name">Por <span>{author}</span></h3>

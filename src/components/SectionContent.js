@@ -24,7 +24,7 @@ export default class SectionContent extends React.Component {
                     )}
                     {image && (
                         <div className="block-image">
-                            <img src={withPrefix(image)} alt={imageAlt} />
+                            <img src={withPrefix(image)} alt={imageAlt} loading="lazy" />
                         </div>
                     )}
                     {content && <div className="block-content inner-sm">{markdownify(content)}</div>}

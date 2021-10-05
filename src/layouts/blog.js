@@ -19,7 +19,7 @@ export default class Blog extends React.Component {
         return (
             <article key={index} className="post grid-item">
                 <div className="post-inside">
-                    {thumbImage && <Link className="post-thumbnail" href={postUrl}><img src={withPrefix(thumbImage)} alt={thumbImageAlt} /></Link>}
+                    {thumbImage && <Link className="post-thumbnail" href={postUrl}><img src={withPrefix(thumbImage)} alt={thumbImageAlt} loading="lazy" /></Link>}
                     <header className="post-header">
                         <h2 className="post-title"><Link href={postUrl}>{title}</Link></h2>
                         <div className="post-meta">

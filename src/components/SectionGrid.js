@@ -17,7 +17,7 @@ export default class SectionGrid extends React.Component {
                 {isNumbered && <span className="grid-item-counter" aria-hidden="true">{index + 1}.</span>}
                 {image && (
                     <div className="grid-item-image">
-                        <img src={withPrefix(image)} alt={imageAlt} />
+                        <img src={withPrefix(image)} alt={imageAlt} loading="lazy" />
                     </div>
                 )}
                 {title && <h3 className="grid-item-title">{title}</h3>}

@@ -27,7 +27,7 @@ export default class Footer extends React.Component {
                             </div>
                             <div className="site-logo-footer">
                                 <Link href={withPrefix('/')}>
-                                    <img src={withPrefix(logo)} alt={logoAlt} />
+                                    <img src={withPrefix(logo)} alt={logoAlt} loading="lazy" />
                                 </Link>
                             </div>
                         </div>
