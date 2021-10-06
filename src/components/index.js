@@ -13,6 +13,7 @@ import SectionHero from './SectionHero';
 import SectionPosts from './SectionPosts';
 import MainPosts from './MainPosts';
 import Author from './Author';
+import Donations from './Donations';
 
 export {
     Action,
@@ -29,7 +30,8 @@ export {
     SectionHero,
     SectionPosts,
     MainPosts,
-    Author
+    Author,
+    Donations
 };
 
 export default {
@@ -47,5 +49,6 @@ export default {
     SectionHero,
     SectionPosts,
     MainPosts,
-    Author
+    Author,
+    Donations
 };

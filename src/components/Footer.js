@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { htmlToReact, withPrefix, Link } from '../utils';
 import ActionLink from './ActionLink';
 import Action from './Action';
-
+import Donations from './Donations';
 export default class Footer extends React.Component {
     render() {
         const config = _.get(this.props, 'config');
@@ -31,11 +31,14 @@ export default class Footer extends React.Component {
                                 </Link>
                             </div>
                         </div>
-                        {hasSocial && !_.isEmpty(socialLinks) && (
-                            <div className="social-links">
-                                {_.map(socialLinks, (action, index) => <Action key={index} action={action} />)}
-                            </div>
-                        )}
+                        <div className="site-buttons">
+                            <Donations />
+                            {hasSocial && !_.isEmpty(socialLinks) && (
+                                <div className="social-links">
+                                    {_.map(socialLinks, (action, index) => <Action key={index} action={action} />)}
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </footer>
