@@ -1,0 +1,67 @@
+.Newsletter {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: max-content;
+  margin: 0 auto;
+  padding: 30px 10px 30px 10px;
+  background-color: #254580;
+  text-align: center;
+
+  & h3, p, span {
+    width: 85%;
+    margin: inherit auto;
+    color: _palette(light-gray);
+  }
+
+  & span {
+    font-size: 14px;
+  }
+}
+
+.Newsletter-form {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  min-width: 320px;
+  max-width: 480px;
+  margin: 0 auto;
+
+  & input {
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    background-color: _palette(light-gray);
+    border: none;
+    outline: none;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+  }
+
+  & button {
+    width: max-content;
+    height: 40px;
+    padding: 0 16px;
+    font-weight: 500;
+    background-color: _palette(accent-blue);
+    color: _palette(light-gray);
+    border: none;
+    outline: none;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .Newsletter {
+    padding: 30px;
+
+    & h3, p, span {
+      width: 100%;
+    }
+  }
+
+  .Newsletter-form {
+    width: 100%;
+  }
+}

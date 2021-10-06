@@ -4,6 +4,7 @@ import _ from 'lodash';
 
 import { withPrefix, classNames } from '../utils';
 import Header from './Header';
+import Newsletter from './Newsletter';
 import Footer from './Footer';
 
 export default class Body extends React.Component {
@@ -79,6 +80,7 @@ export default class Body extends React.Component {
                     <main id="content" className="site-content">
                         {this.props.children}
                     </main>
+                    <Newsletter />
                     <Footer config={config} />
                 </div>
             </React.Fragment>
