@@ -12,7 +12,7 @@ export default function Newsletter() {
         <input type="text" name="email" placeholder="Tu correo electrónico*" required />
         <button type="submit" value="Subscribe">Suscribirse</button>
       </form>
-      <span>Sin spam</span>
+      <span>Nunca enviaremos spam</span>
     </section>
   )
 }
