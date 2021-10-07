@@ -31,6 +31,26 @@
         "has_social": true,
         "logo_img": "images/peiscof-logo-small.png",
         "logo_img_alt": "Logo Peiscof",
+        "categories": [
+            {
+                "name": "Noticias"
+            },
+            {
+                "name": "Tutoriales"
+            },
+            {
+                "name": "Programación"
+            },
+            {
+                "name": "Juegos"
+            },
+            {
+                "name": "Android & Apple"
+            },
+            {
+                "name": "Windows & Linux"
+            }
+        ],
         "social_links": [
             {
                 "label": "Twitter",
@@ -58,13 +78,6 @@
                 "url": "https://www.linkedin.com/",
                 "style": "icon",
                 "icon": "linkedin",
-                "new_window": true
-            },
-            {
-                "label": "Telegram",
-                "url": "https://www.linkedin.com/",
-                "style": "icon",
-                "icon": "telegram",
                 "new_window": true
             }
         ]

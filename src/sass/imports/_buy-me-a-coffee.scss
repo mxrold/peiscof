@@ -3,19 +3,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 290px;
   margin-bottom: 36px;
   padding: 12px;
-  background-color: rgba(0, 0, 0, .025);
+  background-color: rgba(0, 0, 0, .1);
   border-radius: 9px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid _palette(charcoal-light-60);
   text-align: center;
 
   & p {
     margin: 0 0 8px 0;
     font-size: 20px;
     font-weight: 700;
-    color: _palette(charcoal-light-7);
+    color: _palette(white);
   }
 
   & a {
@@ -41,11 +40,23 @@
   font-size: 16px;
   font-weight: 700;
   background-color: #fd0;
-  color: _palette(charcoal);
+  color: _palette(charcoal) !important;
   border-radius: 7px;
 
   & img {
     width: 25px;
     height: 25px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .Donations {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .Donations {
+    max-width: 290px;
   }
 }

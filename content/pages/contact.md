@@ -24,6 +24,7 @@ sections:
         default_value: Selecciona una opción
         options:
           - Error en el sitio
+          - Sugerencias
           - Otro
       - input_type: textarea
         name: message
