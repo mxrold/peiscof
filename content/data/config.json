@@ -26,31 +26,31 @@
             }
         ]
     },
+    "categories": [
+        {
+            "name": "Noticias"
+        },
+        {
+            "name": "Tutoriales"
+        },
+        {
+            "name": "Programación"
+        },
+        {
+            "name": "Juegos"
+        },
+        {
+            "name": "Android & Apple"
+        },
+        {
+            "name": "Windows & Linux"
+        }
+    ],
     "footer": {
         "content": "2021 Peiscof. De Argentina con 💚.",
         "has_social": true,
         "logo_img": "images/peiscof-logo-small.png",
         "logo_img_alt": "Logo Peiscof",
-        "categories": [
-            {
-                "name": "Noticias"
-            },
-            {
-                "name": "Tutoriales"
-            },
-            {
-                "name": "Programación"
-            },
-            {
-                "name": "Juegos"
-            },
-            {
-                "name": "Android & Apple"
-            },
-            {
-                "name": "Windows & Linux"
-            }
-        ],
         "social_links": [
             {
                 "label": "Twitter",

@@ -5,6 +5,7 @@ import { htmlToReact, withPrefix, Link } from '../utils';
 import ActionLink from './ActionLink';
 import Action from './Action';
 import Donations from './Donations';
+import Categories from './Categories';
 import { FiArrowUpCircle } from 'react-icons/fi'
 export default class Footer extends React.Component {
     render() {
@@ -12,7 +13,7 @@ export default class Footer extends React.Component {
         const footer = _.get(config, 'footer');
         const copyright = _.get(footer, 'content');
         const links = _.get(footer, 'links');
-        const categories = _.get(footer, 'categories');
+        const categories = _.get(config, 'categories');
         const hasSocial = _.get(footer, 'has_social');
         const socialLinks = _.get(footer, 'social_links');
         const logo = _.get(footer, 'logo_img');
@@ -36,12 +37,11 @@ export default class Footer extends React.Component {
                         </div>
                     </div>
                     <div className="site-buttons">
-                        <div className="site-categories">
-                            <p>Categorias</p>
-                            <ul className="site-categories-list">
-                                {_.map(categories, (action) => <li key={action.name}>{action.name}</li>)}
-                            </ul>
-                        </div>
+                        <Categories 
+                            categories={categories}
+                            style={'footer'}
+                            styleItem={'footer-list'}
+                        />
                         <div className="site-social">
                             <Donations />
                         </div>

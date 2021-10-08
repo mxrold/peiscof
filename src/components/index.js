@@ -15,6 +15,7 @@ import MainPosts from './MainPosts';
 import Author from './Author';
 import Donations from './Donations';
 import Newsletter from './Newsletter';
+import Categories from './Categories';
 
 export {
     Action,
@@ -33,7 +34,8 @@ export {
     MainPosts,
     Author,
     Donations,
-    Newsletter
+    Newsletter,
+    Categories
 };
 
 export default {
@@ -53,5 +55,6 @@ export default {
     MainPosts,
     Author,
     Donations,
-    Newsletter
+    Newsletter,
+    Categories
 };
