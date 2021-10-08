@@ -5,6 +5,7 @@ import moment from 'moment-strftime';
 import { Layout } from '../components/index';
 import { htmlToReact, withPrefix, markdownify, readingTime } from '../utils';
 import Author from '../components/Author';
+
 export default class Post extends React.Component {
     render() {
         const data = _.get(this.props, 'data');
@@ -17,7 +18,7 @@ export default class Post extends React.Component {
         const tag = _.get(page, 'tag').toUpperCase()
         const date = _.get(page, 'date');
         const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
-        const formattedDate = moment(date).locale('es').strftime('%e de %B de %Y');
+        const formattedDate = moment(date).locale('es').format('L');
         const author = _.get(page, 'author');
         const author_img = _.get(page, 'author_img');
         const author_description = _.get(page, 'author_description');

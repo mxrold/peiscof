@@ -32,20 +32,20 @@
   }
 
   .grid-col-3 & {
-    -ms-flex-preferred-size: 33.333%;
-    flex-basis: 33.333%;
-    max-width: 32.333%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
 
-    @media only screen and (max-width: 540px) {
-      -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
+    @media only screen and (min-width: 760px) {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
       max-width: 48%;
     }
 
-    @media only screen and (max-width: 760px) {
-      -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-      max-width: 100%;
+    @media only screen and (min-width: 1020px) {
+      -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
+      max-width: 32.333%;
     }
   }
 }

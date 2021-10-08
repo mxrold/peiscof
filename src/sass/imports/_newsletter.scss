@@ -3,13 +3,12 @@
   place-items: center;
   height: max-content;
   margin: 0 auto;
-  padding: 30px 10px 30px 10px;
+  padding: 30px 10px;
   background-image: linear-gradient(to left, #46c08b, #41be87, #3bbc83, #35b97f, #2fb77b);
   text-align: center;
 
   & h3, p, span {
-    width: 85%;
-    margin: inherit auto;
+    margin-bottom: 16px;
     color: _palette(light-gray);
   }
 

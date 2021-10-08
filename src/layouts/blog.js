@@ -3,7 +3,7 @@ import _ from 'lodash';
 import moment from 'moment-strftime';
 
 import { Layout } from '../components/index';
-import { classNames, getPageUrl, Link, withPrefix } from '../utils';
+import { classNames, getPageUrl, Link, withPrefix, readingTime } from '../utils';
 
 export default class Blog extends React.Component {
     renderPost(post, index) {
@@ -12,19 +12,38 @@ export default class Blog extends React.Component {
         const thumbImageAlt = _.get(post, 'thumb_image_alt', '');
         const excerpt = _.get(post, 'excerpt');
         const date = _.get(post, 'date');
+        const tag = _.get(post, 'tag').toUpperCase()
         const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
         const formattedDate = moment(date).locale('es').format('L');
         const postUrl = getPageUrl(post, { withPrefix: true });
+        const markdownContent = _.get(post, 'markdown_content');
 
         return (
             <article key={index} className="post grid-item">
-                <div className="post-inside">
-                    {thumbImage && <Link className="post-thumbnail" href={postUrl}><img src={withPrefix(thumbImage)} alt={thumbImageAlt} loading="lazy" /></Link>}
+                 <div className="post-inside">
+                    {thumbImage && 
+                        <Link className="post-thumbnail" href={postUrl}>
+                            <img src={withPrefix(thumbImage)} alt={thumbImageAlt} loading="lazy" />
+                        </Link>
+                    }
                     <header className="post-header">
-                        <h2 className="post-title"><Link href={postUrl}>{title}</Link></h2>
-                        <div className="post-meta">
-                            <time className="published" dateTime={dateTimeAttr}>{formattedDate}</time>
+                        <div className="post-data">
+                            <div className="post-data-left">
+                                <div className="post-meta">
+                                    <time className="published" dateTime={dateTimeAttr}>{formattedDate}</time>
+                                </div>
+                                <span>·</span>
+                                <div>
+                                    <span>{readingTime(markdownContent)}</span>
+                                </div>
+                            </div>
+                            {tag && 
+                                <div className="post-tag">
+                                    <span>#{tag}</span>
+                                </div>
+                            }
                         </div>
+                        <h3 className="post-title"><Link href={postUrl}>{title}</Link></h3>
                     </header>
                     {excerpt && <p className="post-content">{excerpt}</p>}
                 </div>
@@ -46,7 +65,7 @@ export default class Blog extends React.Component {
             <Layout page={page} config={config}>
                 <div className="inner outer">
                     <header
-                        className={classNames('page-header', 'inner-sm', {
+                        className={classNames('page-header post-header-margin', 'inner-sm', {
                             'screen-reader-text': hideTitle
                         })}
                     >

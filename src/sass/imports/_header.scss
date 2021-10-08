@@ -2,9 +2,10 @@
  * Site Header
  */
 .site-header {
+  padding-top: .6em;
+  padding-bottom: .4em;
+  // background-color: _palette(charcoal-light-7); Dark header
   border-bottom: 1px solid _palette(charcoal-light-75);
-  padding-bottom: 1em;
-  padding-top: 1em;
 
   .palette-dark & {
     border-bottom-color: _palette(charcoal-light-7);
@@ -82,26 +83,7 @@
   font-size: 18px;
   line-height: 1.2;
   font-weight: 500;
-
-  &.current-menu-item {
-    color: _palette(accent);
-
-    .accent-green & {
-      color: _palette(accent-green);
-    }
-  
-    .accent-blue & {
-      color: _palette(accent-blue);
-    }
-  
-    .accent-violet & {
-      color: _palette(accent-violet);
-    }
-  
-    .accent-yellow & {
-      color: _palette(accent-yellow);
-    }
-  }
+  // color: _palette(white); Dark header
 
   a {
     &:not(.button) {
@@ -109,23 +91,7 @@
       color: inherit;
 
       &:hover {
-        color: _palette(accent);
-
-        .accent-green & {
-          color: _palette(accent-green);
-        }
-      
-        .accent-blue & {
-          color: _palette(accent-blue);
-        }
-      
-        .accent-violet & {
-          color: _palette(accent-violet);
-        }
-      
-        .accent-yellow & {
-          color: _palette(accent-yellow);
-        }
+        color: _palette(accent-green);
       }
     }
   }
@@ -134,8 +100,8 @@
 #menu-open,
 #menu-close {
   background: 0;
+  color: _palette(accent-green);
   border: 0;
-  color: inherit;
   height: 30px;
   padding: 0;
   position: relative;
@@ -230,6 +196,7 @@
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     position: relative;
+    // background-color: _palette(charcoal-light-7); Dark menu
   }
 
   #menu-close {
