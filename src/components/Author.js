@@ -1,8 +1,5 @@
 import { withPrefix } from '../utils';
-import {
-  FaLinkedin,
-  FaRegEnvelope
-} from 'react-icons/fa'
+import Icon from './Icon';
 
 export default function Author ({ image, author, description, linkedin, email }) {
   return (
@@ -21,12 +18,12 @@ export default function Author ({ image, author, description, linkedin, email })
         <ul className="author-social-links">
           <li>
             <a href={`https://www.linkedin.com/in/${linkedin}`} target="_blank">
-              <FaLinkedin />
+              <Icon icon='linkedin' />
             </a>
           </li>
           <li>
             <a href={`mailto:${email}`}>
-              <FaRegEnvelope />
+              <Icon icon='email' />
             </a>
           </li>
         </ul>

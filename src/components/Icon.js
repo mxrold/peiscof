@@ -21,7 +21,7 @@ const COLOR = {
     twitter: '#1DA1F2',
     youtube: '#FF0000',
     telegram: '#0088cc',
-    email: '#F9FAFB',
+    email: '#272c30',
     whatsapp: '#128c7e'
 }
 export default class Icon extends React.Component {
