@@ -16,6 +16,8 @@ import Author from './Author';
 import Donations from './Donations';
 import Newsletter from './Newsletter';
 import Categories from './Categories';
+import SharePost from './SharePost';
+import RelatedPosts from './RelatedPosts';
 
 export {
     Action,
@@ -35,7 +37,9 @@ export {
     Author,
     Donations,
     Newsletter,
-    Categories
+    Categories,
+    SharePost,
+    RelatedPosts
 };
 
 export default {
@@ -56,5 +60,7 @@ export default {
     Author,
     Donations,
     Newsletter,
-    Categories
+    Categories,
+    SharePost,
+    RelatedPosts
 };

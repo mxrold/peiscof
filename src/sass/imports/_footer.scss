@@ -59,6 +59,9 @@
 .social-links {
   a {
     margin: 0 10px;
+    & svg {
+      color: #F9FAFB !important;
+    }
 
     &:not(.button) {
       border: 0;

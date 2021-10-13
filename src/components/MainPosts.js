@@ -18,7 +18,7 @@ export default class MainPosts extends React.Component {
     const markdownContent = _.get(post, 'markdown_content');
 
     return (
-        <article key={index} className="post grid-item-main post-main">
+        <article key={index} className="post grid-item-main post-main site-content">
             <div className="post-inside">
                 {thumbImage && 
                     <Link className="post-thumbnail" href={postUrl}>

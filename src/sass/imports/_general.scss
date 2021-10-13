@@ -29,30 +29,13 @@ body {
 
 a {
   border-bottom: 1px solid currentColor;
-  color: _palette(accent);
   text-decoration: none;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 
-  .accent-green & {
-    color: _palette(accent-green);
-  }
-
-  .accent-blue & {
-    color: _palette(accent-blue);
-  }
-
-  .accent-violet & {
-    color: _palette(accent-violet);
-  }
-
-  .accent-yellow & {
-    color: _palette(accent-yellow);
-  }
-
   &:hover,
   &:focus {
-    color: _palette(charcoal);
+    color: _palette(accent-green);
   }
 
   &:not(.button) {

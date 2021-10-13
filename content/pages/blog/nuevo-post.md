@@ -1,10 +1,11 @@
 ---
 title: Título
+url: /nuevo-post
 subtitle: Subtítulo
 excerpt: >-
     Introducción al artículo
 date: '2021-09-29'
-tag: Programación
+tag: ninguno
 thumb_image: https://i.ibb.co/kQkLgcC/articulo-de-prueba-image-thumb.jpg
 thumb_image_alt: Descripción de la imagen si no logra cargarse
 image: https://i.ibb.co/ZGRdQ60/articulo-de-prueba-image-1.jpg

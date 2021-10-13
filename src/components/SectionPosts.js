@@ -19,7 +19,7 @@ export default class SectionPosts extends React.Component {
         const markdownContent = _.get(post, 'markdown_content');
 
         return (
-            <article key={index} className="post grid-item">
+            <article key={index} className="post grid-item site-content">
                 <div className="post-inside">
                     {thumbImage && 
                         <Link className="post-thumbnail" href={postUrl}>

@@ -1,0 +1,40 @@
+.post-share {
+  margin-top: 5rem;
+}
+
+.post-share-list {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin: 0 auto;
+  padding: 0;
+  & li {
+    list-style: none;
+  }
+
+  & a {
+    color: _palette(charcoal);
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .post-share {
+    margin-top: 0;
+  } 
+  .post-share-list {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    & li {
+      list-style: none;
+    }
+  
+    & a {
+      color: _palette(charcoal);
+      border: none;
+    }
+  }
+}

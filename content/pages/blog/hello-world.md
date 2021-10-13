@@ -1,5 +1,6 @@
 ---
-title: Hello world
+title: Hello world 1
+url: /hello-world
 subtitle: 'This is a nice subtitle'
 excerpt: >-
     Welcome to my new blog
