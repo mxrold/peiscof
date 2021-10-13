@@ -1,6 +1,9 @@
 .author {
-  width: max-content;
   margin: 5rem auto 0 auto;
+  padding: 18px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 9px;
+  border: 1px solid _palette(charcoal-light-60);
   text-align: center;
 }
 
@@ -36,10 +39,9 @@
   display: flex;
   align-items: center;
   margin-top: 0.5rem;
-  border-top: 1px solid _palette(charcoal-light-60);
   & p {
     margin: 0 9px 0 0;
-    font-weight: 500;
+    font-size: 18px;
   }
 }
 
@@ -47,30 +49,20 @@
   display: flex;
   align-items: center;
   width: max-content;
-  margin: 0.5rem 0 0 0;
+  margin: 0;
   padding: 0;
-
-  & li {
-    list-style: none;
-    margin: 0 4.5px;
-    & a {
+    & li {
+      list-style: none;
+      margin: 0 4.5px;
+      & a {
       border-bottom: none;
     }
-      & svg {
-        width: 26px;
-        height: 26px;
-        color: _palette(charcoal);
-          &:hover {
-            color: _palette(accent-blue);
-            transition: .3s ease;
-          }
-      }
   }
-  
 }
 
 @media only screen and (min-width: 600px) {
   .author {
+    width: max-content;
     text-align: start;
   }
 
