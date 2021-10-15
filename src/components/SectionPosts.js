@@ -60,34 +60,39 @@ export default class SectionPosts extends React.Component {
         const colNumber = _.get(section, 'col_number', 'three');
         const posts = _.orderBy(_.get(this.props, 'posts', []), 'date', 'desc');
         const postsNumber = _.get(section, 'posts_number', 3);
-        const recentPosts = posts.slice(4, postsNumber);
+        const oldPosts = posts.slice(4, postsNumber);
 
         return (
-            <section id={sectionId} className="block block-posts outer">
-                <div className="inner">
-                    {(title || subtitle) && (
-                        <div className="block-header inner-sm">
-                            {title && <h2 className="block-title line-top">{title}</h2>}
-                            {subtitle && <p className="block-subtitle">{htmlToReact(subtitle)}</p>}
+            <>
+                {
+                    oldPosts.length !== 0 && 
+                    <section id={sectionId} className="block block-posts outer">
+                        <div className="inner">
+                            {(title || subtitle) && (
+                                <div className="block-header inner-sm">
+                                    {title && <h2 className="block-title line-top">{title}</h2>}
+                                    {subtitle && <p className="block-subtitle">{htmlToReact(subtitle)}</p>}
+                                </div>
+                            )}
+                            <div className="block-content">
+                                <div
+                                    className={classNames('post-feed', 'grid', {
+                                        'grid-col-2': colNumber === 'two',
+                                        'grid-col-3': colNumber === 'three'
+                                    })}
+                                >
+                                    {_.map(oldPosts, (post, index) => this.renderPost(post, index))}
+                                </div>
+                            </div>
+                            {!_.isEmpty(actions) && (
+                                <div className="block-buttons inner-sm">
+                                    <CtaButtons actions={actions} />
+                                </div>
+                            )}
                         </div>
-                    )}
-                    <div className="block-content">
-                        <div
-                            className={classNames('post-feed', 'grid', {
-                                'grid-col-2': colNumber === 'two',
-                                'grid-col-3': colNumber === 'three'
-                            })}
-                        >
-                            {_.map(recentPosts, (post, index) => this.renderPost(post, index))}
-                        </div>
-                    </div>
-                    {!_.isEmpty(actions) && (
-                        <div className="block-buttons inner-sm">
-                            <CtaButtons actions={actions} />
-                        </div>
-                    )}
-                </div>
-            </section>
+                    </section>
+                }
+            </>
         );
     }
 }
