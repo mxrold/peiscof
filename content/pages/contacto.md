@@ -5,7 +5,7 @@ sections:
   - section_id: contact-form
     type: section_form
     content: >-
-      ¡Hola! Gracias por su interés en escribirnos. Por favor complete el siguiente formulario o envíenos un correo electrónico a [peiscof@gmail.com](mailto:peiscof@gmail.com)
+      ¡Hola! Gracias por su interés en escribirnos. Por favor complete el siguiente formulario o envíenos un correo electrónico a [team@peiscof.com](mailto:team@peiscof.com)
     form_id: contactForm
     form_fields:
       - input_type: text
@@ -33,8 +33,8 @@ sections:
         is_required: true
     submit_label: Enviar mensaje
 seo:
-  title: Contact
-  description: This is the contact page
+  title: Contacto | Peiscof
+  description: ¡Hola! Gracias por su interés en escribirnos. Por favor complete el formulario de este enlace o envíenos un correo electrónico a team@peiscof.com
   extra:
     - name: 'og:type'
       value: website
@@ -43,13 +43,13 @@ seo:
       value: Contact
       keyName: property
     - name: 'og:description'
-      value: This is the contact page
+      value: ¡Hola! Gracias por su interés en escribirnos. Por favor complete el formulario de este enlace o envíenos un correo electrónico a team@peiscof.com
       keyName: property
     - name: 'twitter:card'
       value: summary
     - name: 'twitter:title'
       value: Contact
     - name: 'twitter:description'
-      value: This is the contact page
+      value: ¡Hola! Gracias por su interés en escribirnos. Por favor complete el formulario de este enlace o envíenos un correo electrónico a team@peiscof.com
 layout: advanced
 ---

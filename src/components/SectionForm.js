@@ -23,10 +23,10 @@ export default class SectionForm extends React.Component {
         function handleSendEmail(e) {
             e.preventDefault();
         
-            emailjs.sendForm('service_6evaz2l', 'template_ku7zq0i', e.target, 'user_MIYCiUP5LQl52r9NDoiFD', process.env.EMAIL_TOKEN)
+            emailjs.sendForm('service_dfu7c5o', 'template_ku7zq0i', e.target, 'user_MIYCiUP5LQl52r9NDoiFD', process.env.EMAIL_TOKEN)
               .then((result) => {
                 console.log(result.text);
-                Router.push('/thank-you')
+                Router.push('/correo-enviado')
               }, (error) => {
                 console.log(error.text);
                 window.alert('Ocurrió un error al enviar el formulario.')

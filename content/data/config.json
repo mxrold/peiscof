@@ -1,6 +1,7 @@
 {
     "title": "Peiscof",
     "path_prefix": "/",
+    "favicon": "images/peiscof-logo-small.png",
     "color_scheme": "light",
     "accent_color": "blue",
     "header": {
@@ -21,7 +22,7 @@
             },
             {
                 "label": "Contacto",
-                "url": "/contact/",
+                "url": "/contacto/",
                 "style": "link"
             }
         ]
@@ -40,10 +41,16 @@
             "name": "Juegos"
         },
         {
-            "name": "Android & Apple"
+            "name": "Android"
         },
         {
-            "name": "Windows & Linux"
+            "name": "Apple"
+        },
+        {
+            "name": "Windows"
+        },
+        {
+            "name": "Linux"
         }
     ],
     "footer": {
@@ -54,28 +61,28 @@
         "social_links": [
             {
                 "label": "Twitter",
-                "url": "https://twitter.com/",
+                "url": "https://twitter.com/peiscof",
                 "style": "icon",
                 "icon": "twitter",
                 "new_window": true
             },
             {
                 "label": "Instagram",
-                "url": "https://www.instagram.com/",
+                "url": "https://www.instagram.com/peiscof",
                 "style": "icon",
                 "icon": "instagram",
                 "new_window": true
             },
             {
                 "label": "Facebook",
-                "url": "https://www.facebook.com/",
+                "url": "https://www.facebook.com/peiscof",
                 "style": "icon",
                 "icon": "facebook",
                 "new_window": true
             },
             {
                 "label": "Linkedin",
-                "url": "https://www.linkedin.com/",
+                "url": "https://www.linkedin.com/peiscof",
                 "style": "icon",
                 "icon": "linkedin",
                 "new_window": true

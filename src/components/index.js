@@ -18,6 +18,7 @@ import Newsletter from './Newsletter';
 import Categories from './Categories';
 import SharePost from './SharePost';
 import RelatedPosts from './RelatedPosts';
+import NoPosts from './NoPosts';
 
 export {
     Action,
@@ -39,7 +40,8 @@ export {
     Newsletter,
     Categories,
     SharePost,
-    RelatedPosts
+    RelatedPosts,
+    NoPosts
 };
 
 export default {
@@ -62,5 +64,6 @@ export default {
     Newsletter,
     Categories,
     SharePost,
-    RelatedPosts
+    RelatedPosts,
+    NoPosts
 };

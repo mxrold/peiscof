@@ -1,9 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
 import moment from 'moment-strftime';
-
 import { Layout } from '../components/index';
 import { classNames, getPageUrl, Link, withPrefix, readingTime } from '../utils';
+import NoPosts from '../components/NoPosts';
 
 export default class Blog extends React.Component {
     renderPost(post, index) {
@@ -63,24 +63,28 @@ export default class Blog extends React.Component {
 
         return (
             <Layout page={page} config={config}>
-                <div className="inner outer">
-                    <header
-                        className={classNames('page-header post-header-margin', 'inner-sm', {
-                            'screen-reader-text': hideTitle
-                        })}
-                    >
-                        <h1 className="page-title line-top">{title}</h1>
-                        {subtitle && <div className="page-subtitle">{subtitle}</div>}
-                    </header>
-                    <div
-                        className={classNames('post-feed', 'grid', {
-                            'grid-col-2': colNumber === 'two',
-                            'grid-col-3': colNumber === 'three'
-                        })}
-                    >
-                        {_.map(posts, (post, index) => this.renderPost(post, index))}
+                {
+                    posts.length !== 0 
+                    ? <div className="inner outer">
+                        <header
+                            className={classNames('page-header post-header-margin', 'inner-sm', {
+                                'screen-reader-text': hideTitle
+                            })}
+                        >
+                            <h1 className="page-title line-top">{title}</h1>
+                            {subtitle && <div className="page-subtitle">{subtitle}</div>}
+                        </header>
+                        <div
+                            className={classNames('post-feed', 'grid', {
+                                'grid-col-2': colNumber === 'two',
+                                'grid-col-3': colNumber === 'three'
+                            })}
+                        >
+                            {_.map(posts, (post, index) => this.renderPost(post, index))}
+                        </div>
                     </div>
-                </div>
+                    : <NoPosts />
+                }
             </Layout>
         );
     }
