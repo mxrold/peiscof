@@ -41,7 +41,6 @@ export default class Body extends React.Component {
         const seoTitle = _.get(seo, 'title');
         const title = seoTitle ? seoTitle : [pageTitle, configTitle].join(' | ');
         const seoDescription = _.get(seo, 'description', '');
-        const seoRobots = _.get(seo, 'robots', []).join(',');
         const seoExtra = _.get(seo, 'extra', []).map((meta, index) => {
             const keyName = _.get(meta, 'keyName', 'name');
             const name = _.get(meta, 'name');
@@ -72,7 +71,7 @@ export default class Body extends React.Component {
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <meta name="google" content="notranslate" />
                     <meta name="description" content={seoDescription} />
-                    {!_.isEmpty(seoRobots) && <meta name="robots" content={seoRobots} />}
+                    <meta name="robots" content="follow, index" />
                     {seoExtra}
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
