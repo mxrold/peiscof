@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import moment from 'moment-strftime';
 import { getPageUrl, htmlToReact, classNames, Link, withPrefix, readingTime } from '../utils';
+import CtaButtons from './CtaButtons';
 import NoPosts from './NoPosts';
 
 export default class MainPosts extends React.Component {
@@ -53,11 +54,13 @@ export default class MainPosts extends React.Component {
   render() {
     const section = _.get(this.props, 'section');
     const sectionId = _.get(section, 'section_id');
+    const actions = _.get(section, 'actions');
     const title = _.get(section, 'title');
     const subtitle = _.get(section, 'subtitle');
     const colNumber = _.get(section, 'col_number', 'three');
     const posts = _.orderBy(_.get(this.props, 'posts', []), 'date', 'desc');
-    const recentPosts = posts.slice(0, 4);
+    const postsNumber = _.get(section, 'posts_number', 3);
+    const recentPosts = posts.slice(0, postsNumber);
 
     return (
         <>
@@ -80,6 +83,11 @@ export default class MainPosts extends React.Component {
                         >
                             {_.map(recentPosts, (post, index) => this.renderPost(post, index))}
                         </div>
+                        {!_.isEmpty(actions) && (
+                            <div className="block-buttons inner-sm">
+                                <CtaButtons actions={actions} />
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>

@@ -10,7 +10,6 @@ import SectionContent from './SectionContent';
 import SectionForm from './SectionForm';
 import SectionGrid from './SectionGrid';
 import SectionHero from './SectionHero';
-import SectionPosts from './SectionPosts';
 import MainPosts from './MainPosts';
 import Author from './Author';
 import Donations from './Donations';
@@ -33,7 +32,6 @@ export {
     SectionForm,
     SectionGrid,
     SectionHero,
-    SectionPosts,
     MainPosts,
     Author,
     Donations,
@@ -57,7 +55,6 @@ export default {
     SectionForm,
     SectionGrid,
     SectionHero,
-    SectionPosts,
     MainPosts,
     Author,
     Donations,

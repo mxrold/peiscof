@@ -5,13 +5,8 @@ sections:
   - section_id: main-posts
     type: main_posts
     title: Últimos artículos
-    posts_number: 4
+    posts_number: 16
     col_number: two
-  - section_id: latest-posts
-    type: section_posts
-    title: Anteriores artículos
-    posts_number: 9
-    col_number: three
     actions:
       - label: Todos los artículos ❯
         url: blog
