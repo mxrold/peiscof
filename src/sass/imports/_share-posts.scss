@@ -1,40 +1,52 @@
 .post-share {
-  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+  padding: 26px;
+  background-color: _palette(white);
+  border: 2px solid _palette(charcoal-light-75);
+  border-radius: 9px;
+
+  & h3 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
 }
 
 .post-share-list {
   display: flex;
   justify-content: space-between;
-  width: 220px;
+  width: 70%;
   margin: 0 auto;
   padding: 0;
   & li {
+    width: 26px;
+    height: 26px;
     list-style: none;
-  }
-
-  & a {
-    color: _palette(charcoal);
-    border: none;
-  }
-}
-
-@media only screen and (min-width: 1020px) {
-  .post-share {
-    margin-top: 0;
-  } 
-  .post-share-list {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0;
-    & li {
-      list-style: none;
-    }
-  
     & a {
+      display: block;
       color: _palette(charcoal);
       border: none;
     }
+  }
+}
+
+@media only screen and (min-width: 541px) { 
+  .post-share {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1020px) { 
+  .post-share {
+    margin-top: 13px;
+  }
+
+  .post-share-list {
+    width: 100%;
   }
 }

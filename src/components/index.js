@@ -6,10 +6,7 @@ import FormField from './FormField';
 import Header from './Header';
 import Layout from './Layout';
 import Icon from './Icon';
-import SectionContent from './SectionContent';
 import SectionForm from './SectionForm';
-import SectionGrid from './SectionGrid';
-import SectionHero from './SectionHero';
 import MainPosts from './MainPosts';
 import Author from './Author';
 import Donations from './Donations';
@@ -18,6 +15,8 @@ import Categories from './Categories';
 import SharePost from './SharePost';
 import RelatedPosts from './RelatedPosts';
 import NoPosts from './NoPosts';
+import ReadingTime from './ReadingTime';
+import Tag from './Tag';
 
 export {
     Action,
@@ -28,10 +27,7 @@ export {
     Header,
     Layout,
     Icon,
-    SectionContent,
     SectionForm,
-    SectionGrid,
-    SectionHero,
     MainPosts,
     Author,
     Donations,
@@ -39,7 +35,9 @@ export {
     Categories,
     SharePost,
     RelatedPosts,
-    NoPosts
+    NoPosts,
+    ReadingTime,
+    Tag
 };
 
 export default {
@@ -51,10 +49,7 @@ export default {
     Header,
     Layout,
     Icon,
-    SectionContent,
     SectionForm,
-    SectionGrid,
-    SectionHero,
     MainPosts,
     Author,
     Donations,
@@ -62,5 +57,7 @@ export default {
     Categories,
     SharePost,
     RelatedPosts,
-    NoPosts
+    NoPosts,
+    ReadingTime,
+    Tag
 };

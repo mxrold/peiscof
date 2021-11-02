@@ -1,0 +1,48 @@
+
+.post-tag {
+  border-radius: 4.5px;
+  & p {
+    margin: 0;
+    padding: 3px 9px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: _palette(charcoal);
+  }
+}
+
+.post-tag-yellow {
+  background-color: #FCD34D;
+}
+
+.post-tag-purple {
+  background-color: #C4B5FD;
+}
+
+.post-tag-blue {
+  background-color: #93C5FD;
+}
+
+.post-tag-red {
+  background-color: #FCA5A5;
+}
+
+.post-tag-green {
+  background-color: #6EE7B7;
+}
+
+.post-tag-gray {
+  background-color: #D1D5DB;
+}
+
+.post-tag-indigo {
+  background-color: #A5B4FC;
+}
+
+.post-tag-pink {
+  background-color: #F9A8D4;
+}
+
+.post-tag-default {
+  background-color: #6B7280;
+}

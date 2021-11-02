@@ -1,9 +1,12 @@
 .author {
-  margin: 5rem auto 0 auto;
-  padding: 18px;
-  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  padding: 26px;
+  background-color: _palette(white);
+  border: 2px solid _palette(charcoal-light-75);
   border-radius: 9px;
-  border: 1px solid _palette(charcoal-light-60);
   text-align: center;
 }
 
@@ -15,7 +18,7 @@
   & img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 9px;
     object-fit: fill;
   }
 }
@@ -25,8 +28,10 @@
 }
 
 .author-name {
+  margin: 0;
+  font-size: 20px;
   & span {
-    font-weight: 700;
+    font-weight: 600;
     color: _palette(accent-green);
   }
 }
@@ -35,45 +40,15 @@
   margin-bottom: 0;
 }
 
-.author-social {
-  display: flex;
-  align-items: center;
-  margin-top: 0.5rem;
-  & p {
-    margin: 0 9px 0 0;
-    font-size: 18px;
-  }
-}
-
-.author-social-links {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  margin: 0;
-  padding: 0;
-    & li {
-      list-style: none;
-      margin: 0 4.5px;
-      & a {
-      border-bottom: none;
-    }
-  }
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 541px) { 
   .author {
-    width: max-content;
-    text-align: start;
-  }
-
-  .author-data {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .author-text {
     margin-top: 0;
-    margin-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1020px) { 
+  .author-image {
+    width: 70px;
+    height: 70px;
   }
 }

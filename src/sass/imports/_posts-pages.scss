@@ -3,7 +3,11 @@
  */
 
 .post-main {
-  width: 100%;
+  margin-bottom: 32px;
+  padding: 9px;
+  background-color: white;
+  border-radius: 9px;
+  border: 2px solid _palette(charcoal-light-75);
 } 
 
 .page-header,
@@ -21,7 +25,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 9px 0;
+  margin: 25px 0 9px 0;
 }
 
 .post-data-left {
@@ -80,6 +84,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 9px;
   }
 }
 
@@ -87,7 +92,6 @@
 .post-thumbnail {
   border: 0;
   display: block;
-  // margin-bottom: 1.33333em;
   position: relative;
   width: 100%;
 
@@ -124,39 +128,29 @@
   }
 }
 
-.post-tag {
-  & span {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 3px 9px;
-    background-color: rgba(0, 0, 0, 0.05);
-    color: _palette(accent-blue);
-    border: 1px solid _palette(accent-blue);
-    border-radius: 50px;
-  }
+.post-full {
+  padding: 26px 9px;
+  border: 2px solid _palette(charcoal-light-75);
 }
 
 @media only screen and (min-width: 541px) {
   .post-feed {
-    &.grid-col-2 {
-      .post-thumbnail {
-        // margin-bottom: 0.83333em;
-      }
-
-      .post-meta {
-        font-size: 14px;
-      }
+    .post-meta {
+      font-size: 14px;
     }
+  }
+
+  .post-extra {
+    display: grid;
+    grid-template: max-content max-content / repeat(2, 1fr);
+    grid-gap: 16px;
+    margin-top: 60px;
   }
 }
 
 @media only screen and (min-width: 761px) {
   .post-feed {
     &.grid-col-3 {
-      .post-thumbnail {
-        // margin-bottom: 0.83333em;
-      }
-
       .post-meta {
         font-size: 14px;
       }
@@ -185,14 +179,19 @@
   }
 
   .post-main {
-    width: 70%;
+    width: 65%;
+  }
+
+  .post-full {
+    padding: 26px;
   }
 
   .post-extra {
+    display: block;
     position: sticky;
     top: 40px;
     width: 25%;
     height: max-content;
-    padding: 26px 0;
+    margin-top: 0;
   }
 }

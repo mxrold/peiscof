@@ -2,8 +2,10 @@ import React from 'react';
 import _ from 'lodash';
 import moment from 'moment-strftime';
 import { Layout } from '../components/index';
-import { classNames, getPageUrl, Link, withPrefix, readingTime } from '../utils';
+import { classNames, getPageUrl, Link, withPrefix } from '../utils';
+import ReadingTime from '../components/ReadingTime';
 import NoPosts from '../components/NoPosts';
+import Tag from '../components/Tag';
 
 export default class Blog extends React.Component {
     renderPost(post, index) {
@@ -12,7 +14,7 @@ export default class Blog extends React.Component {
         const thumbImageAlt = _.get(post, 'thumb_image_alt', '');
         const excerpt = _.get(post, 'excerpt');
         const date = _.get(post, 'date');
-        const tag = _.get(post, 'tag').toUpperCase()
+        const tag = _.get(post, 'tag');
         const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
         const formattedDate = moment(date).locale('es').format('L');
         const postUrl = getPageUrl(post, { withPrefix: true });
@@ -34,14 +36,10 @@ export default class Blog extends React.Component {
                                 </div>
                                 <span>·</span>
                                 <div>
-                                    <span>{readingTime(markdownContent)}</span>
+                                    <ReadingTime text={markdownContent} />
                                 </div>
                             </div>
-                            {tag && 
-                                <div className="post-tag">
-                                    <span>#{tag}</span>
-                                </div>
-                            }
+                            <Tag value={tag} />
                         </div>
                         <h3 className="post-title"><Link href={postUrl}>{title}</Link></h3>
                     </header>

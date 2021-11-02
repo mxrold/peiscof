@@ -1,10 +1,12 @@
 .post-related {
-  width: 100%;
-  margin-top: 13px;
-  padding-top: 26px;
-  border-top: 1px solid _palette(charcoal-light-60);
+  margin-top: 26px;
+  padding: 26px;
+  background-color: _palette(white);
+  border: 2px solid _palette(charcoal-light-75);
+  border-radius: 9px;
 
   & h3 {
+    margin-bottom: 26px;
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
@@ -15,13 +17,14 @@
   padding: 0;
 
   & li {
-    position: relative;
     display: flex;
     flex-direction: column-reverse;
-    width: max-content;
     height: max-content;
-    margin: 26px auto 0 auto;
+    background-color: rgba(0, 0, 0, 0.0125);
+    border-radius: 9px;
+    border: 1px solid _palette(charcoal-light-75);
     list-style: none;
+    
     & a {
       border: none;
     }
@@ -29,35 +32,30 @@
 }
 
 .post-related-list-text {
-  position: absolute;
-  width: calc(100% - 16px);
-  max-width: 344px;
-  padding: 8px;
+  padding: 9px;
   font-size: 16px;
   font-weight: 500;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: _palette(white);
-  box-shadow: 0px -13px 13px 5px rgba(0, 0, 0, 0.3);
+  color: _palette(charcoal);
 }
 
 .post-related-list-image {
   & img {
     width: 100%;
-    max-width: 360px;
-    height: 220px;
-    border-radius: 3.5px;
+    border-radius: 9px 9px 0 0;
   }
 }
 
-@media only screen and (min-width: 761px) {
-  .post-related-list {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    grid-gap: 16px;
-    place-items: center;
+@media only screen and (min-width: 541px) {
+  .post-related {
+    grid-column: span 2;
+    margin-top: 0;
   }
 
   .post-related-list {
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    grid-gap: 16px;
+    margin: 0;
     & li {
       margin: 0;
     }
@@ -65,37 +63,19 @@
 }
 
 @media only screen and (min-width: 1020px) {
-  .post-related-list {
-    display: block;
-    margin: 0;
-    padding: 0;
-
-    & li {
-      position: initial;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 26px;
-      & a {
-        border: none;
-      }
+  .post-related {
+    margin-top: 13px;
+    & h3 {
+      margin-bottom: 0;
     }
   }
 
-  .post-related-list-text {
-    position: initial;
-    width: max-content;
-    margin-right: 9px;
+  .post-related-list {
+    display: block;
     padding: 0;
-    background-color: transparent;
-    color: _palette(charcoal);
-    box-shadow: none;
-  }
 
-  .post-related-list-image {
-    & img {
-      width: 108px;
-      height: 58px;
+    & li {
+      margin-top: 26px;
     }
   }
 }

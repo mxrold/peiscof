@@ -4,8 +4,8 @@
 .site-header {
   padding-top: .6em;
   padding-bottom: .4em;
-  // background-color: _palette(charcoal-light-7); Dark header
-  border-bottom: 1px solid _palette(charcoal-light-75);
+  background-color: _palette(charcoal-light-7);
+  box-shadow: 0px 1px 6px 1px #999999;
 
   .palette-dark & {
     border-bottom-color: _palette(charcoal-light-7);
@@ -83,7 +83,7 @@
   font-size: 18px;
   line-height: 1.2;
   font-weight: 500;
-  // color: _palette(white); Dark header
+  color: _palette(white);
 
   a {
     &:not(.button) {
@@ -105,6 +105,7 @@
   padding: 0;
   position: relative;
   width: 30px;
+  color: _palette(accent-green);
 
   &:hover,
   &:focus,
@@ -195,7 +196,7 @@
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     position: relative;
-    // background-color: _palette(charcoal-light-7); Dark menu
+    background-color: _palette(charcoal-light-7);
   }
 
   #menu-close {

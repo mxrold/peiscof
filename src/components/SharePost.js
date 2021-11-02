@@ -1,10 +1,11 @@
 import Icon from './Icon';
 
 export default function SharePost({ url, title }) {
-  const BASE_URL = 'https://peiscof.netlify.app/blog';
+  const BASE_URL = 'https://peiscof.com/blog/';
 
   return (
     <div className="post-share">
+      <h3>¡Compártelo! 🚀</h3>
       <ul className="post-share-list">
         <li>
             <a href={`https://www.facebook.com/sharer/sharer.php?u=${BASE_URL}${url}`} target="_blank">

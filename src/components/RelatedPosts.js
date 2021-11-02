@@ -18,11 +18,12 @@ export default function RelatedPosts({ posts, title, tag }) {
 
   const randomPosts = data => {
     const MIN = 0;
+    const MAX_POSTS = 2;
     let MAX = data.length;
     let results = [];
     
-    if (data.length > 4) {
-      while(results.length < 4) {
+    if (data.length > MAX_POSTS) {
+      while(results.length < MAX_POSTS) {
         const postIndex = Math.floor(Math.random() * (MAX - MIN)) + MIN;
         if(data[postIndex] !== undefined) {
           results.push(data[postIndex]);
@@ -42,13 +43,13 @@ export default function RelatedPosts({ posts, title, tag }) {
       {
         filteredPosts.length !== 0 &&
         <div className="post-related">
-          <h3>Post relacionados</h3>
+          <h3>Post relacionados 🎉</h3>
           <ul className="post-related-list">
             {
               filteredPosts.map(item => (
                 <li key={item.title}>
-                  <a className="post-related-list-text" href={`https://peiscof.com/blog${item.url}`}>{handleTitleLen(item.title, 48)}</a>
-                  <a className="post-related-list-image" href={`https://peiscof.com/blog${item.url}`}>
+                  <a className="post-related-list-text" href={`https://peiscof.com/blog/${item.url}`}>{handleTitleLen(item.title, 48)}</a>
+                  <a className="post-related-list-image" href={`https://peiscof.com/blog/${item.url}`}>
                    <img src={item.thumb_image} alt={item.thumb_image_alt} />
                   </a>
                 </li>

@@ -3,10 +3,12 @@ import _ from 'lodash';
 import moment from 'moment-strftime';
 
 import { Layout } from '../components/index';
-import { htmlToReact, withPrefix, markdownify, readingTime } from '../utils';
+import { htmlToReact, withPrefix, markdownify } from '../utils';
 import Author from '../components/Author';
 import SharePost from '../components/SharePost';
 import RelatedPosts from '../components/RelatedPosts';
+import ReadingTime from '../components/ReadingTime';
+import Tag from '../components/Tag';
 
 export default class Post extends React.Component {
     render() {
@@ -18,15 +20,11 @@ export default class Post extends React.Component {
         const subtitle = _.get(page, 'subtitle');
         const image = _.get(page, 'image');
         const imageAlt = _.get(page, 'image_alt', '');
-        const tag = _.get(page, 'tag').toUpperCase();
+        const tag = _.get(page, 'tag');
         const date = _.get(page, 'date');
         const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
         const formattedDate = moment(date).locale('es').format('L');
         const author = _.get(page, 'author');
-        const author_img = _.get(page, 'author_img');
-        const author_description = _.get(page, 'author_description');
-        const linkedin = _.get(page, 'author_linkedin');
-        const email = _.get(page, 'author_email');
         const markdownContent = _.get(page, 'markdown_content');
         const posts = _.orderBy(_.get(this.props, 'posts', []), 'date', 'desc');
 
@@ -44,14 +42,10 @@ export default class Post extends React.Component {
                                 </div>
                                 <span>·</span>
                                 <div>
-                                    <span>{readingTime(markdownContent)}</span>
+                                    <ReadingTime text={markdownContent} />
                                 </div>
                             </div>
-                            {tag && 
-                                <div className="post-tag">
-                                    <span>#{tag}</span>
-                                </div>
-                            }
+                            <Tag value={tag} />
                         </div>
                         </header>
                         {image && (
@@ -60,16 +54,11 @@ export default class Post extends React.Component {
                             </div>
                         )}
                         {markdownContent && <div className="post-content inner-sm">{markdownify(markdownContent)}</div>}
-
-                        <Author 
-                            image={author_img}
-                            author={author}
-                            description={author_description}
-                            linkedin={linkedin}
-                            email={email}
-                        />
                     </article>
                     <section className="post-extra">
+                        <Author 
+                            author={author}
+                        />
                         <SharePost url={url} title={title} />
                         <RelatedPosts posts={posts} title={title} tag={tag} />
                     </section>

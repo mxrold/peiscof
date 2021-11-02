@@ -1,6 +1,6 @@
 import { FiClock } from 'react-icons/fi'
 
-export default function readingTime (text) {
+export default function ReadingTime ({ text }) {
   const wordsPerMinute = 200;
   const numOfWords = text.split(/\s/g).length;
   const minutes = numOfWords / wordsPerMinute;

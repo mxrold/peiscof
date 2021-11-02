@@ -1,9 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 import moment from 'moment-strftime';
-import { getPageUrl, htmlToReact, classNames, Link, withPrefix, readingTime } from '../utils';
+import { getPageUrl, htmlToReact, classNames, Link, withPrefix } from '../utils';
 import CtaButtons from './CtaButtons';
 import NoPosts from './NoPosts';
+import ReadingTime from './ReadingTime';
+import Tag from './Tag';
 
 export default class MainPosts extends React.Component {
   renderPost(post, index) {
@@ -12,7 +14,7 @@ export default class MainPosts extends React.Component {
     const thumbImageAlt = _.get(post, 'thumb_image_alt', '');
     const excerpt = _.get(post, 'excerpt');
     const date = _.get(post, 'date');
-    const tag = _.get(post, 'tag').toUpperCase()
+    const tag = _.get(post, 'tag');
     const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
     const formattedDate = moment(date).locale('es').format('L');
     const postUrl = getPageUrl(post, { withPrefix: true });
@@ -34,14 +36,10 @@ export default class MainPosts extends React.Component {
                             </div>
                             <span>·</span>
                             <div>
-                                <span>{readingTime(markdownContent)}</span>
+                                <ReadingTime text={markdownContent} />
                             </div>
                         </div>
-                        {tag && 
-                            <div className="post-tag">
-                                <span>#{tag}</span>
-                            </div>
-                        }
+                        <Tag value={tag} />
                     </div>
                     <h3 className="post-title"><Link href={postUrl}>{title}</Link></h3>
                 </header>
@@ -60,12 +58,11 @@ export default class MainPosts extends React.Component {
     const colNumber = _.get(section, 'col_number', 'three');
     const posts = _.orderBy(_.get(this.props, 'posts', []), 'date', 'desc');
     const postsNumber = _.get(section, 'posts_number', 3);
-    const recentPosts = posts.slice(0, postsNumber);
 
     return (
         <>
         {
-            recentPosts.length !== 0
+            posts.length !== 0
             ?  <section id={sectionId} className="block block-posts outer">
                 <div className="inner">
                     {(title || subtitle) && (
@@ -81,7 +78,7 @@ export default class MainPosts extends React.Component {
                                 'grid-col-3': colNumber === 'three'
                             })}
                         >
-                            {_.map(recentPosts, (post, index) => this.renderPost(post, index))}
+                            {_.map(posts, (post, index) => this.renderPost(post, index))}
                         </div>
                         {!_.isEmpty(actions) && (
                             <div className="block-buttons inner-sm">
