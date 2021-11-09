@@ -15,8 +15,8 @@ export default class Blog extends React.Component {
         const excerpt = _.get(post, 'excerpt');
         const date = _.get(post, 'date');
         const tag = _.get(post, 'tag');
-        const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
-        const formattedDate = moment(date).locale('es').format('L');
+        const dateTimeAttr = moment(date).strftime('%Y-%m-%d %H:%M');
+        const formattedDate = moment(date).strftime('%d/%m/%Y');
         const postUrl = getPageUrl(post, { withPrefix: true });
         const markdownContent = _.get(post, 'markdown_content');
 

@@ -22,8 +22,8 @@ export default class Post extends React.Component {
         const imageAlt = _.get(page, 'image_alt', '');
         const tag = _.get(page, 'tag');
         const date = _.get(page, 'date');
-        const dateTimeAttr = moment(date).locale('es').strftime('%Y-%m-%d %H:%M');
-        const formattedDate = moment(date).locale('es').format('L');
+        const dateTimeAttr = moment(date).strftime('%Y-%m-%d %H:%M');
+        const formattedDate = moment(date).strftime('%d/%m/%Y');
         const author = _.get(page, 'author');
         const markdownContent = _.get(page, 'markdown_content');
         const posts = _.orderBy(_.get(this.props, 'posts', []), 'date', 'desc');

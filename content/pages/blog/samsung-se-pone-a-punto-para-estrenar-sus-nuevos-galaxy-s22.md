@@ -4,7 +4,7 @@ url: samsung-se-pone-a-punto-para-estrenar-sus-nuevos-galaxy-s22
 subtitle: El tope de gama de los Samsung están más cerca de su estreno. Todas las novedades y características que ofrecerán los nuevos dispositivos.
 excerpt: >-
   Año a año, la compañía coreana nos sorprende con sus celulares más avanzados. Hoy hablaremos de la serie S, su gama top, con los nuevos S22 y S22 Ultra.
-date: '2021/11/7'
+date: '2021/11/9'
 tag: android
 thumb_image: https://res.cloudinary.com/peiscof/image/upload/v1636329359/november-2021/Portada_hgnigm.jpg
 thumb_image_alt: SAMSUNG SE PONE A PUNTO PARA ESTRENAR SUS NUEVOS GALAXY S22
@@ -19,6 +19,8 @@ seo:
       - name: 'og:type'
         value: article
         keyName: property
+      - name: 'og:url'
+        value: https://peiscof.com/blog/samsung-se-pone-a-punto-para-estrenar-sus-nuevos-galaxy-s22
       - name: 'og:title'
         value: SAMSUNG SE PONE A PUNTO PARA ESTRENAR SUS NUEVOS GALAXY S22
         keyName: property
@@ -32,6 +34,10 @@ seo:
         relativeUrl: true
       - name: 'twitter:card'
         value: summary_large_image
+      - name: 'twitter:site'
+        value: '@peiscof
+      - name: 'twitter:creator'
+        value: '@peiscof'
       - name: 'twitter:title'
         value: SAMSUNG SE PONE A PUNTO PARA ESTRENAR SUS NUEVOS GALAXY S22
       - name: 'twitter:description'

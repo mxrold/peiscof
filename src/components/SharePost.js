@@ -27,6 +27,11 @@ export default function SharePost({ url, title }) {
               <Icon icon='whatsapp' />
             </a>
         </li>
+        <li>
+            <a href={`https://telegram.me/share/url?url=${BASE_URL}${url}`} target="_blank">
+              <Icon icon='telegram' />
+            </a>
+        </li>
       </ul>
     </div>
   )
