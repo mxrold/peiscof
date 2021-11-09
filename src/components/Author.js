@@ -44,8 +44,8 @@ export default function Author ({ author }) {
                   <img src={withPrefix(data[0].img)} alt={`Imagen de ${data[0].author}`} loading="lazy" />
               </figure>
               <div className="author-text">
-                  <h3 className="author-name">Por <span>{data[0].author}</span></h3>
-                  {data[0].description && <p className="author-description">{data[0].description}</p>}
+                <h3 className="author-name">Por <a href={`https://www.linkedin.com/in/${data[0].linkedin}`} target="_blank">{data[0].author}</a></h3>
+                {data[0].description && <p className="author-description">{data[0].description}</p>}
               </div>
           </div>
         </div>

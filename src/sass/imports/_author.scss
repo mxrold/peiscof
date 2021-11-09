@@ -30,9 +30,10 @@
 .author-name {
   margin: 0;
   font-size: 20px;
-  & span {
+  & a {
     font-weight: 600;
     color: _palette(accent-green);
+    border-bottom: none;
   }
 }
 
