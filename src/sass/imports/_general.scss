@@ -28,6 +28,7 @@ body {
 }
 
 a {
+  color: _palette(accent-blue);
   border-bottom: 1px solid currentColor;
   text-decoration: none;
   -webkit-transition: .3s ease;
@@ -304,4 +305,5 @@ video {
 img {
   height: auto;
   max-width: 100%;
+  border-radius: 9px;
 }

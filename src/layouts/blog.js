@@ -57,7 +57,7 @@ export default class Blog extends React.Component {
         const hideTitle = _.get(page, 'hide_title');
         const subtitle = _.get(page, 'subtitle');
         const colNumber = _.get(page, 'col_number', 'three');
-        const posts = _.orderBy(_.get(this.props, 'posts', []), 'date', 'desc');
+        const posts = _.orderBy(_.get(this.props, 'posts', []), 'date', 'asc');
 
         return (
             <Layout page={page} config={config}>
