@@ -8,7 +8,8 @@ import {
     FaYoutube,
     FaTelegram,
     FaRegEnvelope,
-    FaWhatsapp
+    FaWhatsapp,
+    FaTiktok
 } from 'react-icons/fa'
 import { RiInstagramFill } from 'react-icons/ri'
 
@@ -22,7 +23,8 @@ const COLOR = {
     youtube: '#FF0000',
     telegram: '#0088cc',
     email: '#272c30',
-    whatsapp: '#128c7e'
+    whatsapp: '#128c7e',
+    tiktok: '#ff0050'
 }
 export default class Icon extends React.Component {
     render() {
@@ -64,8 +66,12 @@ export default class Icon extends React.Component {
                 return (
                     <FaWhatsapp size={SIZE} color={COLOR.whatsapp} />
                 );
+            case 'tiktok':
+                return (
+                    <FaTiktok size={SIZE} color={COLOR.tiktok} />
+                );
             default:
-                return null;
+                return '';
         }
     }
 }
