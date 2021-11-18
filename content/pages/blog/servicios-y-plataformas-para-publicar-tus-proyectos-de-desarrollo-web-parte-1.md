@@ -20,7 +20,7 @@ seo:
         value: article
         keyName: property
       - name: 'og:url'
-        value: https://peiscof.com/blog/servicios-y-plataformas-para-publicar-tus-proyectos-de-desarrollo-web---parte-i
+        value: https://peiscof.com/blog/servicios-y-plataformas-para-publicar-tus-proyectos-de-desarrollo-web-parte-i
       - name: 'og:title'
         value: Servicios y plataformas pará publicar tus proyectos de desarrollo web - Parte I
         keyName: property
@@ -31,7 +31,7 @@ seo:
       - name: 'og:image'
         value: https://res.cloudinary.com/peiscof/image/upload/v1637175666/november-2021/servicios-y-plataformas-para-publicar-tus-proyectos-de-desarrollo-web-parte-I-imagen_m3djl2.png
         keyName: property
-        relativeUrl: true
+        relativeUrl: false
       - name: 'twitter:card'
         value: summary_large_image
       - name: 'twitter:site'
@@ -45,7 +45,7 @@ seo:
           Descubre las mejores plataformas gratuitas para almacenar tus proyectos y sitios web. Aprende a utilizar Firebase, Netlify, GitHub Pages, Vercel, Surge y GitLab.
       - name: 'twitter:image'
         value: https://res.cloudinary.com/peiscof/image/upload/v1637175666/november-2021/servicios-y-plataformas-para-publicar-tus-proyectos-de-desarrollo-web-parte-I-imagen_m3djl2.png
-        relativeUrl: true
+        relativeUrl: false
 layout: post
 ---
 

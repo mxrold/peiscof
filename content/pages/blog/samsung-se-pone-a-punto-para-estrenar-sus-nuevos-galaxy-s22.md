@@ -31,7 +31,7 @@ seo:
       - name: 'og:image'
         value: https://res.cloudinary.com/peiscof/image/upload/v1636329110/november-2021/Principal_lgmrmb.jpg
         keyName: property
-        relativeUrl: true
+        relativeUrl: false
       - name: 'twitter:card'
         value: summary_large_image
       - name: 'twitter:site'
@@ -45,7 +45,7 @@ seo:
           Año a año, la compañía coreana nos sorprende con sus celulares más avanzados, si no con una gama intermedia que brinda buenos rendimientos para los usuarios. Hoy hablaremos de la serie S, su gama top, con los nuevos S22 y S22 Ultra.
       - name: 'twitter:image'
         value: https://res.cloudinary.com/peiscof/image/upload/v1636329110/november-2021/Principal_lgmrmb.jpg
-        relativeUrl: true
+        relativeUrl: false
 layout: post
 ---
 
