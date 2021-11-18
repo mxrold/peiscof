@@ -1,5 +1,5 @@
 ---
-title: Servicios y plataformas pará publicar tus proyectos de desarrollo web - Parte I
+title: Servicios y plataformas para publicar tus proyectos de desarrollo web - Parte I
 url: servicios-y-plataformas-para-publicar-tus-proyectos-de-desarrollo-web-parte-1
 subtitle: ¿Creaste un proyecto y no sabes como subirlo a internet? ¿Estás comenzando en el mundo del desarrollo web y quieres armar tu portafolio? Acompáñanos en este artículo donde te contaremos sobre las plataformas más conocidas y como utilizarlas.
 excerpt: >-
@@ -7,12 +7,12 @@ excerpt: >-
 date: '2021/11/18'
 tag: programación
 thumb_image: https://res.cloudinary.com/peiscof/image/upload/v1637175731/november-2021/servicios-y-plataformas-para-publicar-tus-proyectos-de-desarrollo-web-parte-I-portada_ykgdub.png
-thumb_image_alt: Servicios y plataformas pará publicar tus proyectos de desarrollo web - Parte I
+thumb_image_alt: Servicios y plataformas para publicar tus proyectos de desarrollo web - Parte I
 image: https://res.cloudinary.com/peiscof/image/upload/v1637175666/november-2021/servicios-y-plataformas-para-publicar-tus-proyectos-de-desarrollo-web-parte-I-imagen_m3djl2.png
-image_alt: Servicios y plataformas pará publicar tus proyectos de desarrollo web - Parte I
+image_alt: Servicios y plataformas para publicar tus proyectos de desarrollo web - Parte I
 author: martin-roldan
 seo:
-    title: Servicios y plataformas pará publicar tus proyectos de desarrollo web - Parte I
+    title: Servicios y plataformas para publicar tus proyectos de desarrollo web - Parte I
     description: >-
       Descubre las mejores plataformas gratuitas para almacenar tus proyectos y sitios web. Aprende a utilizar Firebase, Netlify, GitHub Pages, Vercel, Surge y GitLab.
     extra:
@@ -22,7 +22,7 @@ seo:
       - name: 'og:url'
         value: https://peiscof.com/blog/servicios-y-plataformas-para-publicar-tus-proyectos-de-desarrollo-web-parte-i
       - name: 'og:title'
-        value: Servicios y plataformas pará publicar tus proyectos de desarrollo web - Parte I
+        value: Servicios y plataformas para publicar tus proyectos de desarrollo web - Parte I
         keyName: property
       - name: 'og:description'
         value: >-
@@ -39,7 +39,7 @@ seo:
       - name: 'twitter:creator'
         value: '@peiscof'
       - name: 'twitter:title'
-        value: Servicios y plataformas pará publicar tus proyectos de desarrollo web - Parte I
+        value: Servicios y plataformas para publicar tus proyectos de desarrollo web - Parte I
       - name: 'twitter:description'
         value: >-
           Descubre las mejores plataformas gratuitas para almacenar tus proyectos y sitios web. Aprende a utilizar Firebase, Netlify, GitHub Pages, Vercel, Surge y GitLab.
@@ -49,15 +49,15 @@ seo:
 layout: post
 ---
 
-Al día de hoy, existen múltiples servicios qué nos permiten alojar esos proyectos qué realizamos a modo de práctica pará aprender una nueva tecnología o montar algo mucho más profesional.
+Al día de hoy, existen múltiples servicios que nos permiten alojar esos proyectos que realizamos a modo de práctica para aprender una nueva tecnología o montar algo mucho más profesional.
 
-Cada una de las siguientes plataformas nos permiten **alojar sitios estáticos (HTML - CSS - JavaScript).**  Estas cuentan con planes gratuitos así cómo suscripciones mensuales o anuales, para poder obtener mayores características y beneficios. Nos centraremos en los planes básicos, cómo utilizarlos y desplegar un sitio o aplicación web para que finalmente viva en internet.
+Cada una de las siguientes plataformas nos permiten **alojar sitios estáticos (HTML - CSS - JavaScript).**  Estas cuentan con planes gratuitos así como suscripciones mensuales o anuales, para poder obtener mayores características y beneficios. Nos centraremos en los planes básicos, como utilizarlos y desplegar un sitio o aplicación web para que finalmente viva en internet.
 
 Este artículo está enfocado en el despliegue de sitios estáticos. Si deseas utilizar herramientas como algún tipo de framework (React, Angular, Vue) puedes usar esto como guía, el proceso es muy similar. Debes tener a mano la documentación de cada plataforma para sumarle esas configuraciones extras. ¡Comencemos!
 
 ## Netlify
 
-Netlify es una de las plataformas modernas **orientada a desarrolladores Frontend** la cual nos brinda una **velocidad de carga** asombrosa y **facilidad en el despliegue** y almacenamiento de sitios. Además, nos provee de diversas herramientas que hacen de la plataforma una gran opción a elegir. Las cuales son:
+Netlify es una de las plataformas modernas **orientada a desarrolladores Frontend** la cual nos brinda una **velocidad de carga** asombrosa y **facilidad en el despliegue** y almacenamiento de sitios. Además, nos provee de diversas herramientas que hacen de la plataforma una gran opción a elegir, las cuales son:
 
 - Despliegue continuo.
 - CDN integrado.
@@ -84,8 +84,7 @@ Si deseas agregar un nuevo sitio que ya tienes almacenado en uno de estos servic
 ![https://res.cloudinary.com/peiscof/image/upload/v1637095083/november-2021/netlify-new-site-from-git_k9ibpb.png](https://res.cloudinary.com/peiscof/image/upload/v1637095083/november-2021/netlify-new-site-from-git_k9ibpb.png)
     
 - **Cargarlo manualmente:**
-Subir un proyecto de esta forma es sumamente fácil, para ello debemos **arrastrar** la carpeta del proyecto al panel de Netlify desde nuestra computadora y **soltarla** allí.
-    
+Subir un proyecto de esta forma es sumamente fácil, para ello debemos **arrastrar** la carpeta del proyecto al panel de Netlify desde nuestra computadora y **soltarla** allí.    
 
 #### Despliegue a través de la interfaz de línea de comandos:
 
@@ -206,6 +205,6 @@ Aquí tienes nuestro resultado de este deploy: [Proyecto de prueba](https://capr
 
 ---
 
-Sí algunos conceptos te resultaron desconocidos, no te preocupes, pronto en **Peiscof** estaremos publicando **más tutoriales de programación** pará qué puedas aprender y profundizar más al respecto.
+Sí algunos conceptos te resultaron desconocidos, no te preocupes, pronto en **Peiscof** estaremos publicando **más tutoriales de programación** para que puedas aprender y profundizar más al respecto.
 
 Esta es la **primera entrega del artículo** donde nos adentramos en **Netlify, GitHub Pages y Surge**. Quédate atento que en los próximos días estaremos lanzando la **segunda parte** con más plataformas para el despliegue de aplicaciones.
