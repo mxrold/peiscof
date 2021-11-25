@@ -8,7 +8,7 @@ export default function ReadingTime ({ text }) {
 
   return (
     <span>
-      {readTime} min lectura <FiClock size="14px" color="#8d8d8d" />
+      {readTime}' <FiClock size="14px" color="#8d8d8d" />
     </span>
   )
 }
