@@ -2,19 +2,13 @@
  * Site Footer
  */
 .site-footer {
-  border-top: 1px solid _palette(charcoal-light-60);
+  border-top: 3px solid _palette(charcoal-light-60);
   padding-bottom: 1.33333em;
   padding-top: 2.5em;
   background-color: _palette(charcoal-light-7);
 
   .palette-dark & {
     border-top-color: _palette(charcoal-light-7);
-  }
-}
-
-.site-footer {
-  a:not(.button) {
-    color: _palette(white);
   }
 }
 
@@ -90,6 +84,7 @@
   
   & a {
     font-weight: 500;
+    color: _palette(white);
     border: none;
     text-decoration: none;
 

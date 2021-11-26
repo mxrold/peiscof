@@ -8,3 +8,6 @@ export { default as pathJoin } from './pathJoin';
 export { default as markdownify } from './markdownify';
 export { default as withPrefix } from './withPrefix';
 export { default as Link } from './link';
+export { default as getTag } from './getTag';
+export { default as formatUrl } from './formatUrl';
+export { default as formatTitlePost } from './formatTitlePost';

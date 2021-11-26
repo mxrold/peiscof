@@ -17,6 +17,7 @@ import RelatedPosts from './RelatedPosts';
 import NoPosts from './NoPosts';
 import ReadingTime from './ReadingTime';
 import Tag from './Tag';
+import SectionCategories from './SectionCategories';
 
 export {
     Action,
@@ -37,7 +38,8 @@ export {
     RelatedPosts,
     NoPosts,
     ReadingTime,
-    Tag
+    Tag,
+    SectionCategories
 };
 
 export default {
@@ -59,5 +61,6 @@ export default {
     RelatedPosts,
     NoPosts,
     ReadingTime,
-    Tag
+    Tag,
+    SectionCategories
 };

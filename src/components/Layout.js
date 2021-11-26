@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 import { withPrefix, classNames } from '../utils';
 import Header from './Header';
-// import Categories from './Categories'; 
+import Categories from './Categories'; 
 import Newsletter from './Newsletter';
 import Footer from './Footer';
 
@@ -31,7 +31,7 @@ export default class Body extends React.Component {
         const page = _.get(this.props, 'page');
         const pageTitle = _.get(page, 'title');
         const config = _.get(this.props, 'config');
-        // const categories = _.get(config, 'categories');
+        const categories = _.get(config, 'categories');
         const configTitle = _.get(config, 'title');
         const colorScheme = _.get(config, 'color_scheme', 'light');
         const accentColor = _.get(config, 'accent_color', 'blue');
@@ -81,7 +81,7 @@ export default class Body extends React.Component {
                 </Helmet>
                 <div id="page" className="site">
                     <Header page={page} config={config} />
-                    {/* <Categories categories={categories} style={'header'} styleItem={'header-list'}/> */}
+                    <Categories categories={categories} style={'header'} styleItem={'header-list'}/>
                     <main id="content">
                         {this.props.children}
                     </main>

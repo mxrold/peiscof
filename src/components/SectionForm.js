@@ -1,5 +1,4 @@
 import React from 'react';
-import Router from 'next/router';
 import _ from 'lodash';
 import emailjs from 'emailjs-com';
 
@@ -25,10 +24,9 @@ export default class SectionForm extends React.Component {
         
             emailjs.sendForm('service_dfu7c5o', 'template_ku7zq0i', e.target, 'user_MIYCiUP5LQl52r9NDoiFD', process.env.EMAIL_TOKEN)
               .then((result) => {
-                console.log(result.text);
-                Router.push('/correo-enviado')
+                window.alert('¡Correo enviado!')
+                 e.target.reset()
               }, (error) => {
-                console.log(error.text);
                 window.alert('Ocurrió un error al enviar el formulario.')
               });
           }

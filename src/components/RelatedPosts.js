@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { formatTitlePost } from '../utils';
 
 export default function RelatedPosts({ posts, title, tag }) {
   const [filteredPosts, setFilteredPosts] = useState([]);
@@ -36,8 +37,6 @@ export default function RelatedPosts({ posts, title, tag }) {
     }
   }
 
-  const handleTitleLen = (text, len) => text.length > len ? text.slice(0, len) + '...' : text
-  
   return (
     <>
       {
@@ -48,7 +47,7 @@ export default function RelatedPosts({ posts, title, tag }) {
             {
               filteredPosts.map(item => (
                 <li key={item.title}>
-                  <a className="post-related-list-text" href={`https://peiscof.com/blog/${item.url}`}>{handleTitleLen(item.title, 48)}</a>
+                  <a className="post-related-list-text" href={`https://peiscof.com/blog/${item.url}`}>{formatTitlePost(item.title, 48)}</a>
                   <a className="post-related-list-image" href={`https://peiscof.com/blog/${item.url}`}>
                    <img src={item.thumb_image} alt={item.thumb_image_alt} />
                   </a>

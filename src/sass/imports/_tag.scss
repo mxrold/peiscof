@@ -1,13 +1,14 @@
 
 .post-tag {
   border-radius: 4.5px;
-  & p {
+  & a {
     margin: 0;
     padding: 3px 9px;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     color: _palette(charcoal);
+    border-bottom: none;
   }
 }
 

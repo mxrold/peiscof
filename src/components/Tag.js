@@ -1,30 +1,11 @@
+import { getTag, formatUrl } from '../utils/';
+
 export default function Tag({ value }) {
-  const getTag = tag => {
-    switch (tag) {
-      case 'noticias':
-        return 'yellow';
-      case 'tutoriales':
-        return 'purple';
-      case 'programación':
-        return 'blue';
-      case 'juegos':
-        return 'red';
-      case 'android':
-        return 'green';
-      case 'apple':
-        return 'gray';
-      case 'windows':
-        return 'indigo';
-      case 'linux':
-        return 'pink';
-      default: 
-        return 'default';
-    }
-  }
+  const url = formatUrl(value);
 
   return (
-    <div className={`post-tag post-tag-${getTag(value)}`}>
-        <p>{value}</p>
+    <div className={`post-tag post-tag-${getTag(url)}`}>
+      <a href={`http://localhost:3000/${url}`}>{value}</a>
     </div>
   )
 }
