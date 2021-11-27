@@ -3,7 +3,8 @@ import moment from 'moment-strftime';
 
 export default function SectionCategories({ posts, title }) {
   const [data, setData] = useState([]);
-  const baseURL = 'http://localhost:3000/blog/'
+  const localURL = 'http://localhost:3000/blog/';
+  const prodURL = 'https://peiscof.com/blog/';
 
   useEffect(() => {
     const result = posts.filter(item => item.tag === title.toLowerCase());
@@ -18,11 +19,11 @@ export default function SectionCategories({ posts, title }) {
         data.map(item => (
           <article className="Section__categories--item" key={item.url}>
             <div className="Section__categories--item-data">
-              <a href={`${baseURL}${item.url}`}>{item.title}</a>
+              <a href={`${prodURL}${item.url}`}>{item.title}</a>
               <span>{moment(item.date).strftime('%d/%m/%Y')}</span>
             </div>
             <figure className="Section__categories--item-image">
-              <a href={`${baseURL}${item.url}`}>
+              <a href={`${prodURL}${item.url}`}>
                 <img src={item.image} alt={item.title} />
               </a>
             </figure>
