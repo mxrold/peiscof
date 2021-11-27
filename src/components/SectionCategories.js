@@ -3,8 +3,8 @@ import moment from 'moment-strftime';
 
 export default function SectionCategories({ posts, title }) {
   const [data, setData] = useState([]);
-  const localURL = 'http://localhost:3000/';
-  const prodURL = 'https://peiscof.com/';
+  const localURL = 'http://localhost:3000/blog/';
+  const prodURL = 'https://peiscof.com/blog/';
 
   useEffect(() => {
     const result = posts.filter(item => item.tag === title.toLowerCase());
