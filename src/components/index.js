@@ -18,6 +18,7 @@ import NoPosts from './NoPosts';
 import ReadingTime from './ReadingTime';
 import Tag from './Tag';
 import SectionCategories from './SectionCategories';
+import Modal from './Modal';
 
 export {
     Action,
@@ -39,7 +40,8 @@ export {
     NoPosts,
     ReadingTime,
     Tag,
-    SectionCategories
+    SectionCategories,
+    Modal
 };
 
 export default {
@@ -62,5 +64,6 @@ export default {
     NoPosts,
     ReadingTime,
     Tag,
-    SectionCategories
+    SectionCategories,
+    Modal
 };

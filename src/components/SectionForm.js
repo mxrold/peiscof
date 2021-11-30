@@ -1,35 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import _ from 'lodash';
 import emailjs from 'emailjs-com';
 
 import { htmlToReact, markdownify } from '../utils';
 import FormField from './FormField';
 
-export default class SectionForm extends React.Component {
-    render() {
-        const section = _.get(this.props, 'section');
-        const sectionId = _.get(section, 'section_id');
-        const title = _.get(section, 'title');
-        const subtitle = _.get(section, 'subtitle');
-        const content = _.get(section, 'content');
-        const formId = _.get(section, 'form_id');
-        const formFields = _.get(section, 'form_fields');
-        const submitLabel = _.get(section, 'submit_label');
-        const formHoneypotInputId = formId + '-honeypot';
-        const formHoneypotLabelId = formId + '-honeypot-label';
-        const formHoneypotName = formId + '-bot-field';
+import Modal from './Modal';
 
-        function handleSendEmail(e) {
-            e.preventDefault();
-        
-            emailjs.sendForm('service_dfu7c5o', 'template_ku7zq0i', e.target, 'user_MIYCiUP5LQl52r9NDoiFD', process.env.EMAIL_TOKEN)
-              .then((result) => {
-                window.alert('¡Correo enviado!')
-                 e.target.reset()
-              }, (error) => {
-                window.alert('Ocurrió un error al enviar el formulario.')
-              });
-          }
+export default function SectionForm(props )  {
+    const [isModal, setIsModal] = useState({ open: false, response: '' });
+
+    const section = _.get(props, 'section');
+    const sectionId = _.get(section, 'section_id');
+    const title = _.get(section, 'title');
+    const subtitle = _.get(section, 'subtitle');
+    const content = _.get(section, 'content');
+    const formId = _.get(section, 'form_id');
+    const formFields = _.get(section, 'form_fields');
+    const submitLabel = _.get(section, 'submit_label');
+    const formHoneypotInputId = formId + '-honeypot';
+    const formHoneypotLabelId = formId + '-honeypot-label';
+    const formHoneypotName = formId + '-bot-field';
+
+    function handleSendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_dfu7c5o', 'template_ku7zq0i', e.target, 'user_MIYCiUP5LQl52r9NDoiFD', process.env.EMAIL_TOKEN)
+            .then((result) => {
+              setIsModal({ open: true, response: 'result' });
+            }, (error) => {
+              setIsModal({ open: true, response: 'error' });
+            });
+        }
 
         return (
             <section id={sectionId} className="block block-form outer">
@@ -57,14 +59,15 @@ export default class SectionForm extends React.Component {
                                 </label>
                             </div>
                             <input type="hidden" name="form-name" value={formId} />
-                            {_.map(formFields, (field, index) => <FormField key={index} {...this.props} field={field} />)}
+                            {_.map(formFields, (field, index) => <FormField key={index} {...props} field={field} />)}
                             <div className="form-submit">
                                 <button type="submit" className="button">{submitLabel}</button>
                             </div>
                         </form>
                     </div>
                 </div>
+                {isModal.open && <Modal isModal={isModal} setIsModal={setIsModal} />}
             </section>
         );
     }
-}
+

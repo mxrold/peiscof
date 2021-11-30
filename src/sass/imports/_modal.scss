@@ -1,0 +1,64 @@
+#contact-form {
+  position: relative;
+}
+
+.Modal {
+  position: absolute;
+  top: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  width: calc(100vw - 6vw);
+  height: 100%;
+  background-color: _palette(light-gray);
+  border-radius: 9px;
+  text-align: center;
+}
+
+.Modal__data {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  padding: 26px;
+  background-color: _palette(charcoal-light-75);
+  border-radius: 9px;
+}
+
+.Modal__data--green {
+  border: 1px solid #6EE7B7;
+}
+
+.Modal__data--red {
+  border: 1px solid #fca5a5;
+}
+
+.Modal__data h3 {
+  color: _palette(charcoal-light-7);
+}
+
+.Modal__data p {
+  color: _palette(charcoal-light-15);
+}
+
+.Modal__data span {
+  margin: 0 auto 20px auto;
+}
+
+.Modal__data span svg {
+  width: 75px;
+  height: 75px;
+}
+
+.Modal__data button {
+  font-weight: 500;
+  background-color: transparent;
+  color: _palette(charcoal-light-7);
+  border: 2px solid _palette(charcoal-light-40);
+  border-radius: 9px;
+}
+
+.Modal__data button:hover {
+  background-color: #dbdbdb;
+}
